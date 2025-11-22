@@ -1,0 +1,255 @@
+/* styles.css */
+:root {
+    --primary-color: #ff6600; /* Laranja da marca */
+    --secondary-color: #1a1a1a;
+    --text-color: #333;
+    --light-text: #f4f4f4;
+    --dark-bg: #111;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif; /* Usando a fonte moderna */
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--dark-bg); /* Fundo geral escuro */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background: var(--secondary-color);
+    color: var(--light-text);
+    padding: 1rem 0;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.logo .subtitle {
+    color: var(--primary-color);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: var(--light-text);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--primary-color);
+}
+
+/* Hero Section - MODIFICADO PARA O 3D */
+.hero {
+    background-color: var(--secondary-color); /* Removi a imagem de fundo para focar no 3D */
+    color: var(--light-text);
+    padding: 4rem 0; /* Reduzi um pouco o padding */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Novo container flex para alinhar texto e 3D */
+.hero-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    min-height: 400px; /* Garante altura mínima */
+}
+
+.hero-content {
+    flex: 1; /* Ocupa metade do espaço */
+    max-width: 500px;
+    z-index: 2;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+/* Container do 3D */
+#canvas-container {
+    flex: 1; /* Ocupa a outra metade */
+    height: 450px; /* Altura fixa para o container do carro */
+    position: relative;
+    min-width: 300px; /* Largura mínima para não sumir */
+    /* Borda opcional para visualizar a área do 3D enquanto desenvolve */
+    /* border: 1px dashed #ff660055; */
+}
+
+
+.cta-button {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--light-text);
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background: #e55b00;
+    transform: translateY(-3px);
+}
+
+/* Services Section */
+.services {
+    padding: 4rem 0;
+    text-align: center;
+    background-color: #f9f9f9; /* Fundo claro para contraste */
+    color: var(--text-color);
+}
+
+.services h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: var(--secondary-color);
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    border-bottom: 4px solid var(--primary-color);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    background: var(--secondary-color);
+    color: var(--light-text);
+    padding: 3rem 0 1rem;
+    text-align: center;
+}
+
+.footer-content {
+    margin-bottom: 2rem;
+}
+
+.footer-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+    }
+    nav ul {
+        margin-top: 1rem;
+    }
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    /* No mobile, empilha o texto e o 3D */
+    .hero-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #canvas-container {
+        width: 100%;
+        height: 350px; /* Um pouco menor no mobile */
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+}
+/* Adicione isso ao seu style.css */
+#canvas-container {
+    width: 100%;
+    height: 400px; /* Altura fixa para o exemplo, ajuste conforme necessário */
+    background-color: #f0f0f0; /* Cor de fundo de fallback */
+    border-radius: 8px; /* Opcional: arredondar cantos */
+    overflow: hidden; /* Garante que nada saia do container */
+}
+
+/* Em telas maiores, você pode querer aumentar a altura */
+@media (min-width: 768px) {
+    #canvas-container {
+        height: 500px;
+    }
+}
+#canvas-container {
+    width: 100%;
+    height: 400px; /* Pode aumentar para 500px ou 600px para mais impacto */
+    background-color: #a0a0a0; /* Cor de fundo enquanto carrega */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.2); /* Sombra interna para profundidade */
+}
+@media (min-width: 768px) {
+    #canvas-container {
+        height: 500px;
+    }
+}

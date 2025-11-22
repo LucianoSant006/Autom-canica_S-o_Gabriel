@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Mecânica São Gabriel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <h1>São Gabriel</h1>
+                <span class="subtitle">Auto Mecânica</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Início</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-flex">
+                <div class="hero-content">
+                    <h2>Cuidamos do seu carro como se fosse nosso.</h2>
+                    <p>Honestidade, transparência e mão de obra qualificada para garantir sua segurança na estrada.</p>
+                    <a href="https://wa.me/5519991339760" target="_blank" class="cta-button">Agendar Revisão</a>
+                </div>
+
+                <div id="canvas-container">
+                    <p style="color: #666; text-align: center; padding-top: 100px;">Carregando oficina 3D...</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="container services">
+            <h2>Nossos Serviços</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>Mecânica Geral</h3>
+                    <p>Diagnóstico e reparo completo para todas as marcas.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Injeção Eletrônica</h3>
+                    <p>Tecnologia de ponta para diagnóstico preciso.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Suspensão e Freios</h3>
+                    <p>Sua segurança é nossa prioridade.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contato">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h3>Auto Mecânica São Gabriel</h3>
+                <p>Rua Exemplo, 123 - Campinas, SP</p>
+                <p>(19) 99133-9760</p>
+            </div>
+            <div class="social-links">
+                </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Auto Mecânica São Gabriel. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/three@0.132.2/build/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://unpkg.com/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
+
+    <script src="js.js"></script>
+</body>
+</html>
