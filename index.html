@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auto Mecânica São Gabriel</title>
+    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,6 +22,7 @@
                     <li><a href="index.html" class="active">Início</a></li>
                     <li><a href="sobre.html">Sobre Nós</a></li>
                     <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#localizacao">Localização</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
@@ -27,33 +31,73 @@
 
     <main>
         <section class="hero">
-            <div class="container hero-flex">
-                <div class="hero-content">
-                    <h2>Cuidamos do seu carro como se fosse nosso.</h2>
-                    <p>Honestidade, transparência e mão de obra qualificada para garantir sua segurança na estrada.</p>
-                    <a href="https://wa.me/5519991339760" target="_blank" class="cta-button">Agendar Revisão</a>
-                </div>
+            <div class="container hero-text-center">
+                <h2>Cuidamos do seu carro como se fosse nosso.</h2>
+                <p>Honestidade, transparência e mão de obra qualificada para garantir sua segurança na estrada.</p>
+                <a href="https://wa.me/5519991339760" target="_blank" class="cta-button">
+                    <i class="fab fa-whatsapp"></i> Agendar Revisão
+                </a>
+            </div>
 
-                <div id="canvas-container">
-                    <p style="color: #666; text-align: center; padding-top: 100px;">Carregando oficina 3D...</p>
-                </div>
+            <div id="canvas-container">
+                <p class="loading-text">Carregando oficina 3D...</p>
             </div>
         </section>
 
         <section id="servicos" class="container services">
-            <h2>Nossos Serviços</h2>
+            <div class="section-header">
+                <h2>Nossos Serviços</h2>
+                <p>Soluções completas para manter seu veículo novo.</p>
+            </div>
+            
             <div class="service-grid">
                 <div class="service-card">
+                    <div class="icon-box">
+                        <i class="fas fa-tools"></i>
+                    </div>
                     <h3>Mecânica Geral</h3>
-                    <p>Diagnóstico e reparo completo para todas as marcas.</p>
+                    <p>Motor, câmbio e manutenção preventiva com peças originais.</p>
                 </div>
+                
                 <div class="service-card">
+                    <div class="icon-box">
+                        <i class="fas fa-microchip"></i>
+                    </div>
                     <h3>Injeção Eletrônica</h3>
-                    <p>Tecnologia de ponta para diagnóstico preciso.</p>
+                    <p>Diagnóstico computadorizado para identificar falhas com precisão.</p>
                 </div>
+                
                 <div class="service-card">
+                    <div class="icon-box">
+                        <i class="fas fa-car-crash"></i>
+                    </div>
                     <h3>Suspensão e Freios</h3>
-                    <p>Sua segurança é nossa prioridade.</p>
+                    <p>Amortecedores, pastilhas e alinhamento para sua segurança.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon-box">
+                        <i class="fas fa-oil-can"></i>
+                    </div>
+                    <h3>Troca de Óleo</h3>
+                    <p>Lubrificantes de alta performance e troca de filtros.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="localizacao" class="location-section">
+            <div class="container">
+                <h2>Onde Estamos</h2>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117659.8366914615!2d-47.16782523274232!3d-22.90556637380766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c61de74b4bdd%3A0x2a0d7d3d7c501e7e!2sCampinas%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1715000000000!5m2!1spt-BR!2sbr" 
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
         </section>
@@ -63,21 +107,25 @@
         <div class="container footer-content">
             <div class="footer-info">
                 <h3>Auto Mecânica São Gabriel</h3>
-                <p>Rua Exemplo, 123 - Campinas, SP</p>
-                <p>(19) 99133-9760</p>
+                <p><i class="fas fa-map-marker-alt"></i> Rua Exemplo, 123 - Campinas, SP</p>
+                <p><i class="fab fa-whatsapp"></i> (19) 99133-9760</p>
             </div>
-            <div class="social-links">
-                </div>
         </div>
         <div class="copyright">
             <p>&copy; 2025 Auto Mecânica São Gabriel. Todos os direitos reservados.</p>
         </div>
     </footer>
+<script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.158.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.158.0/examples/jsm/"
+            }
+        }
+    </script>
 
-    <script src="https://unpkg.com/three@0.132.2/build/three.min.js"></script>
-    <script src="https://unpkg.com/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
-    <script src="https://unpkg.com/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
-
-    <script src="js.js"></script>
+    <script type="module" src="js/workshop.js"></script>
+    
+  
 </body>
 </html>

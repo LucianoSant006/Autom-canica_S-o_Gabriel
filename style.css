@@ -1,18 +1,19 @@
-/* styles.css */
+/* style.css - ATUALIZADO */
 :root {
-    --primary-color: #ff6600; /* Laranja da marca */
-    --secondary-color: #1a1a1a;
+    --primary-color: #ff6600; /* Laranja vibrante */
+    --secondary-color: #1a1a1a; /* Preto quase total */
     --text-color: #333;
     --light-text: #f4f4f4;
     --dark-bg: #111;
+    --card-bg: #ffffff;
 }
 
 body {
     margin: 0;
-    font-family: 'Montserrat', sans-serif; /* Usando a fonte moderna */
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--dark-bg); /* Fundo geral escuro */
+    background-color: #f4f4f4;
 }
 
 .container {
@@ -33,6 +34,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .logo h1 {
@@ -40,12 +42,14 @@ header {
     font-size: 1.8rem;
     text-transform: uppercase;
     font-weight: 900;
+    color: #fff;
 }
 
 .logo .subtitle {
     color: var(--primary-color);
     font-weight: 700;
     letter-spacing: 1px;
+    font-size: 0.9rem;
 }
 
 nav ul {
@@ -63,86 +67,94 @@ nav ul li a {
     color: var(--light-text);
     text-decoration: none;
     font-weight: 700;
+    font-size: 0.9rem;
     transition: color 0.3s;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
+nav ul li a:hover, nav ul li a.active {
     color: var(--primary-color);
 }
 
-/* Hero Section - MODIFICADO PARA O 3D */
+/* Hero Section */
 .hero {
-    background-color: var(--secondary-color); /* Removi a imagem de fundo para focar no 3D */
+    background-color: var(--secondary-color);
     color: var(--light-text);
-    padding: 4rem 0; /* Reduzi um pouco o padding */
-    position: relative;
-    overflow: hidden;
+    padding-top: 4rem;
+    padding-bottom: 0; /* O 3D vai encostar em baixo */
+    text-align: center;
 }
 
-/* Novo container flex para alinhar texto e 3D */
-.hero-flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-    min-height: 400px; /* Garante altura mínima */
-}
-
-.hero-content {
-    flex: 1; /* Ocupa metade do espaço */
-    max-width: 500px;
+.hero-text-center {
+    max-width: 800px;
+    margin-bottom: 3rem;
     z-index: 2;
+    position: relative;
 }
 
-.hero-content h2 {
-    font-size: 2.5rem;
+.hero-text-center h2 {
+    font-size: 3rem;
     margin-bottom: 1rem;
     font-weight: 900;
-    line-height: 1.2;
+    line-height: 1.1;
 }
 
-/* Container do 3D */
-#canvas-container {
-    flex: 1; /* Ocupa a outra metade */
-    height: 450px; /* Altura fixa para o container do carro */
-    position: relative;
-    min-width: 300px; /* Largura mínima para não sumir */
-    /* Borda opcional para visualizar a área do 3D enquanto desenvolve */
-    /* border: 1px dashed #ff660055; */
+.hero-text-center p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 2rem;
 }
-
 
 .cta-button {
     display: inline-block;
     background: var(--primary-color);
-    color: var(--light-text);
-    padding: 0.8rem 2rem;
+    color: white;
+    padding: 1rem 2.5rem;
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: 700;
+    border-radius: 50px;
+    font-weight: 800;
     text-transform: uppercase;
-    transition: background 0.3s, transform 0.2s;
-    margin-top: 20px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 102, 0, 0.4);
 }
 
 .cta-button:hover {
     background: #e55b00;
     transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 102, 0, 0.6);
 }
 
-/* Services Section */
-.services {
-    padding: 4rem 0;
+/* 3D Canvas Container */
+#canvas-container {
+    width: 100%;
+    height: 500px; /* Altura generosa */
+    background: linear-gradient(to bottom, var(--secondary-color), #333);
+    position: relative;
+    overflow: hidden;
+}
+
+.loading-text {
     text-align: center;
-    background-color: #f9f9f9; /* Fundo claro para contraste */
-    color: var(--text-color);
+    padding-top: 200px;
+    color: #666;
+    font-weight: bold;
 }
 
-.services h2 {
-    font-size: 2rem;
+/* Services Section - REFORMULADO */
+.services {
+    padding: 5rem 0;
+    background-color: #f9f9f9;
+}
+
+.section-header {
+    text-align: center;
     margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
     color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    font-weight: 900;
 }
 
 .service-grid {
@@ -152,21 +164,52 @@ nav ul li a.active {
 }
 
 .service-card {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-    border-bottom: 4px solid var(--primary-color);
+    background: white;
+    padding: 2.5rem 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    border-bottom: 4px solid transparent;
 }
 
 .service-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    border-bottom-color: var(--primary-color);
+}
+
+.icon-box {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
 }
 
 .service-card h3 {
     color: var(--secondary-color);
     margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+/* Seção de Localização */
+.location-section {
+    padding: 4rem 0;
+    background: white;
+    text-align: center;
+}
+
+.location-section h2 {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+    font-weight: 900;
+}
+
+.map-container {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    border: 5px solid #fff;
 }
 
 /* Footer */
@@ -177,79 +220,62 @@ footer {
     text-align: center;
 }
 
-.footer-content {
-    margin-bottom: 2rem;
-}
-
-.footer-info h3 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
+.footer-info p {
+    margin: 0.5rem 0;
 }
 
 .copyright {
-    font-size: 0.9rem;
-    opacity: 0.7;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.8rem;
+    opacity: 0.6;
+    margin-top: 2rem;
+    border-top: 1px solid #333;
     padding-top: 1rem;
 }
 
-/* Responsividade */
+/* Mobile */
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
+        gap: 15px;
     }
-    nav ul {
-        margin-top: 1rem;
-    }
-    nav ul li {
-        margin: 0 10px;
-    }
-
-    /* No mobile, empilha o texto e o 3D */
-    .hero-flex {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-content {
-        max-width: 100%;
-        margin-bottom: 30px;
-    }
-
-    #canvas-container {
-        width: 100%;
-        height: 350px; /* Um pouco menor no mobile */
-    }
-
-    .hero-content h2 {
+    
+    .hero-text-center h2 {
         font-size: 2rem;
     }
+    
+    #canvas-container {
+        height: 350px;
+    }
 }
-/* Adicione isso ao seu style.css */
-#canvas-container {
-    width: 100%;
-    height: 400px; /* Altura fixa para o exemplo, ajuste conforme necessário */
-    background-color: #f0f0f0; /* Cor de fundo de fallback */
-    border-radius: 8px; /* Opcional: arredondar cantos */
-    overflow: hidden; /* Garante que nada saia do container */
+/* Estilo específico para os botões do WhatsApp no menu flutuante */
+.floating-item.whatsapp-green {
+    background-color: #25D366; /* Verde oficial do WhatsApp */
+    color: white;
+    position: relative; /* Para o tooltip funcionar */
 }
 
-/* Em telas maiores, você pode querer aumentar a altura */
-@media (min-width: 768px) {
-    #canvas-container {
-        height: 500px;
-    }
+.floating-item.whatsapp-green:hover {
+    background-color: #128C7E; /* Verde mais escuro ao passar o mouse */
 }
-#canvas-container {
-    width: 100%;
-    height: 400px; /* Pode aumentar para 500px ou 600px para mais impacto */
-    background-color: #a0a0a0; /* Cor de fundo enquanto carrega */
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: inset 0 0 20px rgba(0,0,0,0.2); /* Sombra interna para profundidade */
+
+/* Opcional: Mostra o número ao passar o mouse (Tooltip) */
+.floating-item.whatsapp-green::after {
+    content: attr(data-number); /* Pega o número do atributo HTML */
+    position: absolute;
+    right: 110%; /* Aparece à esquerda do botão */
+    top: 50%;
+    transform: translateY(-50%);
+    background: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
 }
-@media (min-width: 768px) {
-    #canvas-container {
-        height: 500px;
-    }
+
+.floating-item.whatsapp-green:hover::after {
+    opacity: 1;
 }
