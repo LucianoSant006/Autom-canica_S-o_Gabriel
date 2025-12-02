@@ -1,381 +1,256 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Psicóloga Daiana Lima - Terapia Cognitivo-Comportamental. Aqui você vai entender sua mente e recuperar o equilíbrio emocional.">
-    <title>Psicóloga Daiana Lima | Terapia Cognitivo-Comportamental</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Mecânica São Gabriel</title>
     
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
-  
-    
-    <script src="js/workshop.js" defer></script> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Ajuste específico para garantir que o iframe do Sketchfab fique perfeito */
+        .sketchfab-embed-wrapper {
+            width: 100%;
+            height: 100%;
+            min-height: 450px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            background: #000; /* Fundo preto enquanto carrega */
+        }
+        .sketchfab-embed-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 450px;
+            border: none;
+        }
+    </style>
 </head>
-
 <body>
-    <nav>
-    <div class="nav-container">
-        <a href="#" class="brand-signature">
-            Daiana Lima
-            <span class="crp-mini">CRP 06/141494</span>
-        </a>
 
-        <div class="menu">
-            <div class="btn">
-                <i class="fas fa-times close-btn"></i>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <h1>São Gabriel</h1>
+                <span class="subtitle">Auto Mecânica</span>
             </div>
-            <a href="#home">Início</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="#especialidades">Serviços</a>
-            <a href="#depoimentos">Depoimentos</a>
-            <a href="https://wa.me/5519981084619" target="_blank" class="mobile-cta">Agendar</a>
-        </div>
 
-        <div class="nav-cta">
-            <a href="https://wa.me/5519981084619" target="_blank" class="btn-agendar">
-                Agendar Consulta
-            </a>
-            <div class="btn">
-                <i class="fas fa-bars menu-btn"></i>
-            </div>
+            <button class="hamburger-btn" aria-label="Abrir menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#" class="active">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#localizacao">Localização</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="overlay"></div>
         </div>
-    </div>
-</nav>
+    </header>
+
     <main>
-        <section class="heropage" id="home">
+        <section class="hero">
             <div class="hero-content">
-                <div class="hero-headlines">
-                    <span class="badge">Atendimento Online e Presencial</span>
-                    <h1 class="reveal-type" data-bg-color="#cccccc" data-fg-color="#131313">
-                        Entenda sua mente e recupere o equilíbrio emocional.
-                    </h1>
+                <div class="hero-text" id="sobre">
+                    <span class="tagline">Especialistas em Volkswagen</span>
+                    <h2>Cuidamos do seu carro com Excelência</h2>
                     <p>
-                        Acolhimento e escuta ativa através da Terapia Cognitivo-Comportamental (TCC). 
-                        Um espaço seguro para transformar seus pensamentos e mudar sua vida.
+                        Na Auto Mecânica São Gabriel, oferecemos diagnósticos precisos e manutenção transparente. 
+                        Do motor à funilaria, utilizamos peças originais e tecnologia de ponta para garantir 
+                        sua segurança na estrada.
                     </p>
-                    
-                    <div class="hero-headlines-buttons">
-                        <button class="btn-3" onclick="window.open('https://wa.me/5519981084619', '_blank')">
-                            Agendar Sessão ↷
-                        </button>
-                        <button class="btn-3 btn-transparent" onclick="location.href='#especialidades'">
-                            Saiba como funciona
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="hero-image-container">
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=688&auto=format&fit=crop" alt="Psicóloga em atendimento" class="hero-main-img">
-            </div>
-        </section>
-
-        <section class="mindfulness-section" id="mindfulness">
-            <div class="mindfulness-content">
-                <h2 class="mind-title">Como você está se sentindo agora?</h2>
-                <p class="mind-subtitle">Às vezes, precisamos apenas de uma pausa.</p>
-                
-                <div class="switch-wrapper">
-                    <div class="switch-labels">
-                        <span class="label-on">ON</span>
-                    </div>
-                    
-                    <div class="toggle-switch" id="automaticModeSwitch">
-                        <div class="switch-lever"></div>
-                    </div>
-
-                    <div class="switch-labels">
-                        <span class="label-off">OFF</span>
-                    </div>
-                </div>
-
-                <h3 id="switch-status-text">MODO AUTOMÁTICO: LIGADO</h3>
-                
-                <div id="mindfulness-message" class="hidden-message">
-                    <p>🌿 Respire fundo...</p>
-                    <p>Sinta os seus pés no chão.</p>
-                    <p>Este momento é só seu.</p>
-                    <a href="https://wa.me/5519981084619" target="_blank" class="btn-mindfulness">Quero conversar sobre isso</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="sobre" id="sobre">
-            <img class="img-sobre" src="https://scontent-sjc6-1.cdninstagram.com/v/t51.2885-19/557413511_18325065322242205_4051153389169833911_n.jpg?stp=dst-jpg_e0_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=scontent-sjc6-1.cdninstagram.com&_nc_cat=101&_nc_oc=Q6cZ2QEPDyR1bZAje22zQDtB4L5eBYiXyYuYO3g1dorHYpW_2cHZp1d1YqvNGFpWCYPPPXM&_nc_ohc=f8RUo1GaA8cQ7kNvwEFcWa8&_nc_gid=6XGu9YfYZUFvYSPcpgGEFg&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AfiZh4a6RBNH3BkJuwxM6S78hfwE5Mm1s4clwiSdSJk0VQ&oe=692D0B32&_nc_sid=8b3546" alt="Foto de Perfil Psicóloga Daiana Lima">
-            
-            <div class="sobre-headlines">
-                <h6>SOBRE A PROFISSIONAL</h6>
-                <h1>Psicóloga Daiana Lima</h1>
-                <p>
-                    Ser psicóloga não é só uma profissão, é um chamado. É oferecer <b>acolhimento e escuta ativa</b> nos momentos de dor, conquistas e recomeços.
-                    <br><br>
-                    Com mais de 6 anos de experiência e atuando com Terapia Cognitivo-Comportamental (TCC), meu objetivo é ajudar você a recuperar o equilíbrio emocional.
-                    Acredito que todo ser humano tem potencial de se reconstruir.
-                </p>
-
-                <div class="sobre-info">
-                    <div class="sobre-info-item">
-                        <h5>+2.6k</h5>
-                        <h6>Seguidores</h6>
-                    </div>
-                    <hr class="sobre-info-divider">
-                    <div class="sobre-info-item">
-                        <h5>CRP</h5>
-                        <h6>06/141494</h6>
-                    </div>
-                    <hr class="sobre-info-divider">
-                    <div class="sobre-info-item">
-                        <h5>143+</h5>
-                        <h6>Conteúdos</h6>
-                    </div>
-                </div>
-                
-                <a href="https://www.instagram.com/psicologadaianalima" target="_blank" class="insta-link">
-                    <i class="fa-brands fa-instagram"></i> @psicologadaianalima
-                </a>
-            </div>
-        </section>
-
-        <section class="pets" id="especialidades">
-            <div class="pets-headlines">
-                <i class="fa-solid fa-brain"></i>
-                <h1>Como posso te ajudar?</h1>
-                <p>Identificar o problema é o primeiro passo. O segundo é a psicoterapia.</p>
-            </div>
-
-       <div class="pets-collection">
-    
-    <div class="flip-card">
-        <div class="flip-card-inner">
-            <div class="flip-card-front">
-                <i class="fa-solid fa-cloud-rain icon-front"></i>
-                <h3>Ansiedade</h3>
-                <span class="see-more">Ver detalhes <i class="fa-solid fa-arrow-right"></i></span>
-            </div>
-            <div class="flip-card-back">
-                <h3>Tratamento de Ansiedade</h3>
-                <p>Preocupação excessiva e aperto no peito? Aprenda a gerenciar os sintomas e viva com mais leveza através de técnicas comprovadas.</p>
-                <a href="https://wa.me/5519981084619" target="_blank" class="btn-card">Agendar</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="flip-card">
-        <div class="flip-card-inner">
-            <div class="flip-card-front">
-                <i class="fa-solid fa-battery-quarter icon-front"></i>
-                <h3>Burnout</h3>
-                <span class="see-more">Ver detalhes <i class="fa-solid fa-arrow-right"></i></span>
-            </div>
-            <div class="flip-card-back">
-                <h3>Burnout e Trabalho</h3>
-                <p>O esgotamento profissional precisa de pausa. Reconstrua sua relação com o trabalho e recupere sua energia mental.</p>
-                <a href="https://wa.me/5519981084619" target="_blank" class="btn-card">Agendar</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="flip-card">
-        <div class="flip-card-inner">
-            <div class="flip-card-front">
-                <i class="fa-solid fa-heart-crack icon-front"></i>
-                <h3>Luto & Depressão</h3>
-                <span class="see-more">Ver detalhes <i class="fa-solid fa-arrow-right"></i></span>
-            </div>
-            <div class="flip-card-back">
-                <h3>Acolhimento ao Luto</h3>
-                <p>Um espaço seguro para reorganizar pensamentos, processar a dor e encontrar novos caminhos e significados.</p>
-                <a href="https://wa.me/5519981084619" target="_blank" class="btn-card">Agendar</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="flip-card">
-        <div class="flip-card-inner">
-            <div class="flip-card-front">
-                <i class="fa-solid fa-seedling icon-front"></i>
-                <h3>Autoconhecimento</h3>
-                <span class="see-more">Ver detalhes <i class="fa-solid fa-arrow-right"></i></span>
-            </div>
-            <div class="flip-card-back">
-                <h3>Jornada Interior</h3>
-                <p>Entenda seus padrões de comportamento. O autoconhecimento é a chave para relações mais saudáveis e autoestima.</p>
-                <a href="https://wa.me/5519981084619" target="_blank" class="btn-card">Agendar</a>
-            </div>
-        </div>
-    </div>
-
-</div>
-            </div>
-        </section>
-
-        <section class="processo" id="locais">
-            <div class="processo-headlines">
-                <h1>Onde Atendo</h1>
-                <p>Flexibilidade para cuidar de você onde você estiver.</p>
-            </div>
-            
-            <div class="rifas-container">
-                <div class="rifa-card">
-                    <i class="fa-solid fa-laptop-medical"></i>
-                    <h4>Online</h4>
-                    <p>Atendimento para todo o Brasil e mundo, no conforto da sua casa, com total sigilo e segurança.</p>
-                </div>
-                <div class="rifa-card">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <h4>Hortolândia - SP</h4>
-                    <p>Atendimento presencial acolhedor em consultório especializado.</p>
-                </div>
-                <div class="rifa-card">
-                    <i class="fa-solid fa-city"></i>
-                    <h4>Campinas - SP</h4>
-                    <p>Atendimento presencial na região de Campinas.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="testimunhas" id="depoimentos">
-            <h6>O QUE DIZEM OS PACIENTES</h6>
-            <h1>Histórias de Transformação</h1>
-
-            <div class="testimunhas-container">
-                <div class="testimunhas-item">
-                    <div class="testimunhas-pessoa">
-                        <div class="testimunhas-nome">
-                            <div class="avatar-placeholder">P</div>
-                            <div class="testimunhas-nome-item">
-                                <h4>Paciente Anônimo</h4>
-                                <p>Via Feedback</p>
-                            </div>
-                        </div>
-                        <i class="fa-solid fa-quote-right"></i>
-                    </div>
-                    <p class="testimunhas-text">
-                        "Você não sabe o quanto você me ajuda. Encontrei conforto e acolhimento na terapia num período muito difícil."
-                    </p>
-                </div>
-
-                <div class="testimunhas-item">
-                    <div class="testimunhas-pessoa">
-                        <div class="testimunhas-nome">
-                            <div class="avatar-placeholder">G</div>
-                            <div class="testimunhas-nome-item">
-                                <h4>Gabi do Valle</h4>
-                                <p>Instagram</p>
-                            </div>
-                        </div>
-                        <i class="fa-solid fa-quote-right"></i>
-                    </div>
-                    <p class="testimunhas-text">
-                        "Excelente profissional! 😍😍😍"
-                    </p>
-                </div>
-            </div>
-        </section>
-<section class="terapia-nao-e" id="desmistificando">
-    <div class="terapia-content">
-        
-        <h2 class="title-nao-e">
-            Terapia <br>
-            <span class="cursive-text">Não é...</span>
-        </h2>
-
-        <div class="mind-map-container">
-            
-            <div class="map-item item-top-left">
-                <p>Receita pronta</p>
-                <svg class="arrow-svg" viewBox="0 0 100 100"><path d="M80,80 Q50,50 20,20" fill="none" stroke="#E5989B" stroke-width="2" marker-end="url(#arrowhead)"/></svg>
-            </div>
-
-            <div class="map-item item-top-center">
-                <p>Coisa de louco</p>
-                <span class="arrow-char">↑</span>
-            </div>
-
-            <div class="map-item item-top-right">
-                <p>Lugar de julgamento</p>
-                <svg class="arrow-svg" viewBox="0 0 100 100"><path d="M20,80 Q50,50 80,20" fill="none" stroke="#E5989B" stroke-width="2" marker-end="url(#arrowhead)"/></svg>
-            </div>
-
-            <div class="center-brain">
-                <i class="fa-solid fa-brain pulse-animation"></i>
-            </div>
-
-            <div class="map-item item-bottom-left">
-                <p>Falar somente do passado</p>
-                <svg class="arrow-svg" viewBox="0 0 100 100"><path d="M80,20 Q50,50 20,80" fill="none" stroke="#E5989B" stroke-width="2" marker-end="url(#arrowhead)"/></svg>
-            </div>
-
-            <div class="map-item item-bottom-right">
-                <p>Bate papo</p>
-                <svg class="arrow-svg" viewBox="0 0 100 100"><path d="M20,20 Q50,50 80,80" fill="none" stroke="#E5989B" stroke-width="2" marker-end="url(#arrowhead)"/></svg>
-            </div>
-            
-            <svg style="position: absolute; width: 0; height: 0; overflow: hidden;">
-                <defs>
-                    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-                        <polygon points="0 0, 10 3.5, 0 7" fill="#E5989B" />
-                    </marker>
-                </defs>
-            </svg>
-
-        </div>
-        
-        <p class="conclusion-text">
-            Terapia é <b>ciência</b>, <b>técnica</b> e <b>transformação</b>. ✨
-        </p>
-    </div>
-</section>
-        <footer id="contato">
-            <div class="footer-container">
-                <div class="footer-brand">
-                    <h1>Psicóloga <b class="accent">Daiana Lima</b></h1>
-                    <p>Sua saúde mental é prioridade. Vamos conversar?</p>
-                    <div class="social">
-                        <a href="https://www.instagram.com/psicologadaianalima" target="_blank" title="Instagram">
-                            <i class="fa-brands fa-instagram"></i>
+                    <div class="hero-buttons">
+                        <a href="#contato" class="cta-button">
+                            <i class="fab fa-whatsapp"></i> Agendar Agora
                         </a>
-                        <a href="https://wa.me/5519981084619" target="_blank" title="WhatsApp">
-                            <i class="fa-brands fa-whatsapp"></i>
+                        <a href="#localizacao" class="secondary-button">
+                            <i class="fas fa-map-marker-alt"></i> Ver Endereço
                         </a>
                     </div>
                 </div>
-
-                <div class="footer-contato-info">
-                    <h2>Contato</h2>
-                    <div class="contato-info-item">
-                        <i class="fa-solid fa-phone"></i>
-                        <p>(19) 98108-4619</p>
-                    </div>
-                    <div class="contato-info-item">
-                        <i class="fa-solid fa-envelope"></i>
-                        <p>Contato via Direct/WhatsApp</p>
-                    </div>
-                    <div class="contato-info-item">
-                        <i class="fa-solid fa-id-card"></i>
-                        <p>CRP 06/141494</p>
-                    </div>
-                </div>
-
-                <div class="footer-links">
-                    <h2>Links Rápidos</h2>
-                    <div class="links">
-                        <a href="#home">Início</a>
-                        <a href="#sobre">Sobre</a>
-                        <a href="#especialidades">Serviços</a>
+                
+                <div id="canvas-container">
+                    <div class="sketchfab-embed-wrapper"> 
+                        <iframe 
+                            title="Volkswagen Voyage" 
+                            allowfullscreen 
+                            mozallowfullscreen="true" 
+                            webkitallowfullscreen="true" 
+                            allow="autoplay; fullscreen; xr-spatial-tracking" 
+                            xr-spatial-tracking 
+                            execution-while-out-of-viewport 
+                            execution-while-not-rendered 
+                            web-share 
+                            src="https://sketchfab.com/models/ea1eaa6d28334669aa3a4c5abfd39bf1/embed?autostart=1&ui_controls=1&ui_infos=0&ui_inspector=0&ui_stop=0&ui_watermark=1&ui_watermark_link=1"> 
+                        </iframe> 
+                        
+                        <p style="font-size: 11px; font-weight: normal; margin: 5px; color: #666; text-align: center;"> 
+                            <a href="https://sketchfab.com/3d-models/volkswagen-voyage-ea1eaa6d28334669aa3a4c5abfd39bf1?utm_medium=embed&utm_campaign=share-popup&utm_content=ea1eaa6d28334669aa3a4c5abfd39bf1" target="_blank" rel="nofollow" style="font-weight: bold; color: #888; text-decoration: none;"> Volkswagen Voyage 3D </a>
+                        </p>
                     </div>
                 </div>
             </div>
-            <p class="copyright">&copy; 2025 Psicóloga Daiana Lima. Todos os direitos reservados.</p>
-        </footer>
+        </section>
+
+        <section id="servicos" class="container services">
+            <div class="section-header">
+                <h2>Nossos Serviços</h2>
+                <p>Soluções completas de ponta a ponta para seu veículo.</p>
+            </div>
+            <div class="service-grid">
+                <div class="service-card">
+                    <i class="fas fa-tools icon-box"></i>
+                    <h3>Mecânica Geral</h3>
+                    <p>Motor, câmbio e embreagem.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-oil-can icon-box"></i>
+                    <h3>Troca de Óleo</h3>
+                    <p>Lubrificantes e filtros originais.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-car-crash icon-box"></i>
+                    <h3>Suspensão e Freios</h3>
+                    <p>Segurança e estabilidade garantida.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-microchip icon-box"></i>
+                    <h3>Injeção Eletrônica</h3>
+                    <p>Diagnóstico computadorizado avançado.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-snowflake icon-box"></i>
+                    <h3>Ar Condicionado</h3>
+                    <p>Higienização e recarga de gás.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-check-circle icon-box"></i>
+                    <h3>Revisão Preventiva</h3>
+                    <p>Checklist completo para viagens.</p>
+                </div>
+            </div>
+        </section>
+<section id="marcas" class="brands-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Marcas que Atendemos</h2>
+                    <p>Especialistas nas principais montadoras do mercado.</p>
+                </div>
+                
+                <div class="brands-grid">
+                    <div class="brand-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Volkswagen_Logo_till_1995.svg/1024px-Volkswagen_Logo_till_1995.svg.png" alt="Volkswagen">
+                    </div>
+                    <div class="brand-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mercedes-Logo.svg/1024px-Mercedes-Logo.svg.png" alt="Mercedes">
+                    </div>
+                    <div class="brand-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/2048px-BMW.svg.png" alt="BMW">
+                    </div>
+                    <div class="brand-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Fiat_Automobiles_logo.svg/2048px-Fiat_Automobiles_logo.svg.png" alt="Fiat">
+                    </div>
+                    <div class="brand-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Ford_logo_flat.svg/2560px-Ford_logo_flat.svg.png" alt="Ford">
+                    </div>
+                    <div class="brand-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Chevrolet_bowtie_logo.svg/2560px-Chevrolet_bowtie_logo.svg.png" alt="Chevrolet">
+                    </div>
+                    <div class="brand-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Toyota_Page_Semi-Flat_Logo.svg/2560px-Toyota_Page_Semi-Flat_Logo.svg.png" alt="Toyota">
+                    </div>
+                    <div class="brand-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Honda_Logo.svg/2560px-Honda_Logo.svg.png" alt="Honda">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="localizacao" class="location-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Onde nos Encontrar</h2>
+                </div>
+                
+                <div class="map-container-flex">
+                    <div class="location-info">
+                        <div class="info-item">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <div>
+                                <h3>Endereço</h3>
+                                <p>Rua Exemplo, 123 - Centro<br>Campinas - SP, 13000-000</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="far fa-clock"></i>
+                            <div>
+                                <h3>Horário de Funcionamento</h3>
+                                <p>Segunda a Sexta: 08:00 - 18:00<br>Sábado: 08:00 - 12:00</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <h3>Contato</h3>
+                                <p>(19) 99133-9760</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="map-frame">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117659.36262486668!2d-47.1645388!3d-22.90556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c61de74b8f05%3A0x6a0a09e072382c22!2sCampinas%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <a href="https://wa.me/5519981084619" class="floating-whatsapp" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+    <footer id="contato">
+        <div class="container">
+            <h3>Auto Mecânica São Gabriel</h3>
+            <p>Qualidade e confiança desde 2025.</p>
+            <p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.7;">© Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
+    <script>
+        const hamburger = document.querySelector('.hamburger-btn');
+        const navMenu = document.querySelector('.nav-menu');
+        const overlay = document.querySelector('.overlay');
+        const links = document.querySelectorAll('.nav-menu a');
+
+        function toggleMenu() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+
+        hamburger.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+
+        // Fecha o menu ao clicar em um link
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>

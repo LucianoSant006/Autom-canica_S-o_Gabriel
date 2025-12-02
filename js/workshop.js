@@ -1,97 +1,182 @@
-// MENU MOBILE
-const menu = document.querySelector(".menu");
-const menuBtn = document.querySelector(".menu-btn");
-const closeBtn = document.querySelector(".close-btn");
-const menuLinks = document.querySelectorAll(".menu a");
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
-const toggleMenu = () => {
-    menu.classList.toggle("active");
-};
+let scene, camera, renderer, controls, model;
 
-if(menuBtn) menuBtn.addEventListener("click", toggleMenu);
-if(closeBtn) closeBtn.addEventListener("click", toggleMenu);
+// Configuração do caminho do arquivo
+const ASSET_PATH = 'assets/models/volkswagen_voyage.glb'; 
 
-// Fechar menu ao clicar em links
-menuLinks.forEach(link => {
-    link.addEventListener("click", () => {
-        menu.classList.remove("active");
-    });
-});
+// Inicia o script
+init();
+animate();
 
-// NAVBAR STICKY (Fundo do menu aparece ao rolar)
-const navbar = document.querySelector("nav");
-window.addEventListener("scroll", () => {
-    if(navbar) navbar.classList.toggle("sticky", window.scrollY > 0);
-});
-
-// --- REMOVIDO: SMOOTH SCROLL (Lenis) ---
-// --- REMOVIDO: SCROLL REVEAL (Animações/Zoom) ---
-// --- REMOVIDO: GSAP (Animação de Texto) ---
-
-// HIGHLIGHT MENU ATIVO (SCROLLSPY)
-// Destaca o link do menu correspondente à seção visível
-const sections = document.querySelectorAll("section[id]"); 
-
-window.addEventListener("scroll", () => {
-    let scrollY = window.pageYOffset;
+function init() {
+    const container = document.getElementById('canvas-container');
     
-    sections.forEach(current => {
-        const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - 150; 
-        const sectionId = current.getAttribute("id");
-        const menuLink = document.querySelector(`.menu a[href*=${sectionId}]`);
+    // --- 1. CENA E ILUMINAÇÃO ---
+    scene = new THREE.Scene();
+    scene.background = null; // Fundo transparente (usa o gradiente do CSS)
 
-        if(menuLink) {
-            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                menuLink.classList.add("active-link");
-            } else {
-                menuLink.classList.remove("active-link");
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+    scene.add(ambientLight);
+
+    const dirLight = new THREE.DirectionalLight(0xffffff, 2);
+    dirLight.position.set(5, 10, 7);
+    dirLight.castShadow = true;
+    scene.add(dirLight);
+
+    // Luz de recorte para dar brilho na lataria e vidros
+    const rimLight = new THREE.DirectionalLight(0x4455ff, 1);
+    rimLight.position.set(-5, 0, -5);
+    scene.add(rimLight);
+
+    // --- 2. CÂMERA ---
+    camera = new THREE.PerspectiveCamera(40, container.clientWidth / container.clientHeight, 0.1, 1000);
+    camera.position.set(4, 1.5, 6); // Posição inicial
+
+    // --- 3. RENDERIZADOR ---
+    renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setSize(container.clientWidth, container.clientHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.shadowMap.enabled = true;
+    renderer.outputEncoding = THREE.sRGBEncoding;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    container.appendChild(renderer.domElement);
+
+    // --- 4. CONTROLES ---
+    controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.05;
+    controls.maxPolarAngle = Math.PI / 2 - 0.05; // Evita câmera abaixo do chão
+    controls.minDistance = 2;
+    controls.maxDistance = 10;
+
+    // --- 5. CARREGAR MODELO ---
+    const loader = new GLTFLoader();
+    
+    loader.load(ASSET_PATH, (gltf) => {
+        model = gltf.scene;
+        
+        // --- AUTO-CORREÇÃO DE ESCALA E POSIÇÃO ---
+        const box = new THREE.Box3().setFromObject(model);
+        const center = box.getCenter(new THREE.Vector3());
+        const size = box.getSize(new THREE.Vector3());
+
+        // Centraliza
+        model.position.x += (model.position.x - center.x);
+        model.position.y += (model.position.y - center.y);
+        model.position.z += (model.position.z - center.z);
+
+        // Ajusta escala se for gigante
+        const maxDim = Math.max(size.x, size.y, size.z);
+        let scaleFactor = 1;
+        if (maxDim > 10) {
+            scaleFactor = 4.5 / maxDim; 
+        }
+        model.scale.set(scaleFactor, scaleFactor, scaleFactor);
+        model.position.y = 0; // Coloca no chão
+        
+        // --- CONFIGURAÇÃO DE MATERIAIS (Pintura + Vidros Escuros + Ocultar Interior) ---
+        model.traverse((o) => {
+            if (o.isMesh) {
+                o.castShadow = true;
+                o.receiveShadow = true;
+
+                const matName = o.material.name.toLowerCase();
+
+                // A. PINTURA DO CARRO (Carpaint)
+                if (matName.includes('carpaint')) {
+                    o.material.roughness = 0.2;
+                    o.material.metalness = 0.8;
+                    o.material.clearcoat = 1.0; 
+                    o.material.envMapIntensity = 1.5;
+                }
+
+                // B. VIDROS "INSULFILM" (Preto total e espelhado)
+                if (matName.includes('glass') || matName.includes('window')) {
+                    o.material.color.set(0x000000); // Preto
+                    o.material.transparent = false; // Tira transparência
+                    o.material.opacity = 1.0;
+                    o.material.roughness = 0.05; // Muito liso
+                    o.material.metalness = 0.9;  // Muito reflexivo
+                }
+
+                // C. OCULTAR INTERIOR (Para não ver bancos/painel e melhorar performance)
+                if (matName.includes('interior')) {
+                    o.visible = false; 
+                }
+            }
+        });
+
+        scene.add(model);
+        
+        // Esconde o loader HTML
+        const loaderEl = document.querySelector('.loader');
+        if (loaderEl) loaderEl.style.display = 'none';
+
+    }, undefined, (error) => {
+        console.error('Erro ao carregar modelo:', error);
+        const loaderText = document.querySelector('.loader p');
+        if (loaderText) loaderText.innerText = "Erro ao carregar 3D";
+    });
+
+    // --- 6. CHÃO (Shadow Catcher) ---
+    const planeGeo = new THREE.PlaneGeometry(20, 20);
+    const planeMat = new THREE.ShadowMaterial({ opacity: 0.4 });
+    const plane = new THREE.Mesh(planeGeo, planeMat);
+    plane.rotation.x = -Math.PI / 2;
+    plane.position.y = -0.01;
+    plane.receiveShadow = true;
+    scene.add(plane);
+
+    // Inicializa os eventos dos botões de cor
+    setupColorPicker();
+
+    window.addEventListener('resize', onWindowResize);
+}
+
+function onWindowResize() {
+    const container = document.getElementById('canvas-container');
+    if (!container || !camera || !renderer) return;
+    
+    camera.aspect = container.clientWidth / container.clientHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(container.clientWidth, container.clientHeight);
+}
+
+function animate() {
+    requestAnimationFrame(animate);
+    if (controls) controls.update();
+    if (renderer && scene && camera) renderer.render(scene, camera);
+}
+
+// --- FUNÇÕES DE MUDANÇA DE COR ---
+
+function setupColorPicker() {
+    // Seleciona todos os botões com a classe .color-btn
+    const buttons = document.querySelectorAll('.color-btn');
+    
+    buttons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            // Pega a cor do atributo data-color (ex: #ff0000)
+            const newColor = e.target.getAttribute('data-color');
+            if (newColor) {
+                changeCarColor(newColor);
+            }
+        });
+    });
+}
+
+function changeCarColor(colorHex) {
+    if (!model) return; 
+
+    model.traverse((o) => {
+        if (o.isMesh && o.material) {
+            // Só muda a cor se for material da lataria (carpaint)
+            if (o.material.name.toLowerCase().includes('carpaint')) {
+                o.material.color.set(colorHex);
             }
         }
     });
-});
-
-// FLIP CARD NO MOBILE (CLIQUE)
-const cards = document.querySelectorAll('.flip-card');
-cards.forEach(card => {
-    card.addEventListener('click', () => {
-        // Remove a classe de outros cards
-        cards.forEach(c => {
-            if(c !== card) c.querySelector('.flip-card-inner').classList.remove('flipped-mobile');
-        });
-        // Alterna no card atual
-        card.querySelector('.flip-card-inner').classList.toggle('flipped-mobile');
-    });
-});
-
-// INTERAÇÃO DO MODO AUTOMÁTICO (Mindfulness)
-document.addEventListener("DOMContentLoaded", () => {
-    const switchEl = document.getElementById("automaticModeSwitch");
-    const sectionEl = document.getElementById("mindfulness");
-    const messageEl = document.getElementById("mindfulness-message");
-    const statusText = document.getElementById("switch-status-text");
-
-    if(switchEl) {
-        let isOff = false; 
-
-        switchEl.addEventListener("click", () => {
-            isOff = !isOff; 
-
-            if (isOff) {
-                switchEl.classList.add("switched-off");
-                sectionEl.classList.add("calm-mode");
-                statusText.innerText = "MODO AUTOMÁTICO: DESLIGADO";
-                statusText.style.color = "#fff"; 
-                setTimeout(() => {
-                    messageEl.classList.add("visible");
-                }, 300);
-            } else {
-                switchEl.classList.remove("switched-off");
-                sectionEl.classList.remove("calm-mode");
-                statusText.innerText = "MODO AUTOMÁTICO: LIGADO";
-                statusText.style.color = "#2C3E50"; 
-                messageEl.classList.remove("visible");
-            }
-        });
-    }
-});
+}
