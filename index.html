@@ -61,13 +61,20 @@
 
         <section id="sobre" class="about-section">
             <div class="container about-grid">
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=1974&auto=format&fit=crop" alt="Mecânico trabalhando">
+                <div class="about-image carousel-container">
+                    <div class="carousel-track">
+                        <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=1974&auto=format&fit=crop" alt="Oficina Geral">
+                        <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?q=80&w=2070&auto=format&fit=crop" alt="Mecânica Motor">
+                        <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?q=80&w=2000&auto=format&fit=crop" alt="Ferramentas">
+                        <img src="https://images.unsplash.com/photo-1632823471565-1ec2a1ad4015?q=80&w=2000&auto=format&fit=crop" alt="Elevador Automotivo">
+                    </div>
+                    
                     <div class="experience-badge">
                         <span class="years">Desde</span>
                         <span class="text">2021</span>
                     </div>
                 </div>
+
                 <div class="about-text">
                     <h4 class="section-subtitle">Quem Somos</h4>
                     <h2>Qualidade e Confiança para o seu Automóvel</h2>
@@ -211,7 +218,12 @@
         </div>
     </footer>
 
+    <a href="https://wa.me/5519991339760?text=Ol%C3%A1%2C+vi+o+site+e+gostaria+de+agendar+um+servi%C3%A7o." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <script>
+        // Menu Hamburguer
         const hamburger = document.querySelector('.hamburger-btn');
         const navMenu = document.querySelector('.nav-menu');
         const overlay = document.querySelector('.overlay');
@@ -223,8 +235,10 @@
             overlay.classList.toggle('active');
         }
 
-        hamburger.addEventListener('click', toggleMenu);
-        overlay.addEventListener('click', toggleMenu);
+        if(hamburger) {
+            hamburger.addEventListener('click', toggleMenu);
+            overlay.addEventListener('click', toggleMenu);
+        }
 
         links.forEach(link => {
             link.addEventListener('click', () => {
@@ -233,6 +247,25 @@
                 overlay.classList.remove('active');
             });
         });
+
+        // LÓGICA DO CARROSSEL
+        const track = document.querySelector('.carousel-track');
+        const images = document.querySelectorAll('.carousel-track img');
+        let index = 0;
+
+        function runCarousel() {
+            index++;
+            if (index >= images.length) {
+                index = 0;
+            }
+            // Move o carrossel
+            if(track) {
+                track.style.transform = `translateX(${-index * 100}%)`;
+            }
+        }
+
+        // Muda a imagem a cada 3 segundos (3000ms)
+        setInterval(runCarousel, 3000);
     </script>
 </body>
 </html>
