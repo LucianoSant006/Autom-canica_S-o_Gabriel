@@ -3,30 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto Mecânica São Gabriel</title>
+    <title>Auto Mecânica São Gabriel | Campinas</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        /* Ajuste específico para garantir que o iframe do Sketchfab fique perfeito */
-        .sketchfab-embed-wrapper {
-            width: 100%;
-            height: 100%;
-            min-height: 450px;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            background: #000; /* Fundo preto enquanto carrega */
-        }
-        .sketchfab-embed-wrapper iframe {
-            width: 100%;
-            height: 100%;
-            min-height: 450px;
-            border: none;
-        }
-    </style>
 </head>
 <body>
 
@@ -45,11 +27,11 @@
 
             <nav class="nav-menu">
                 <ul>
-                    <li><a href="#" class="active">Início</a></li>
+                    <li><a href="#inicio" class="active">Início</a></li>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#localizacao">Localização</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#marcas">Marcas</a></li>
+                    <li><a href="#localizacao">Contato</a></li>
                 </ul>
             </nav>
             <div class="overlay"></div>
@@ -57,162 +39,161 @@
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <div class="hero-text" id="sobre">
-                    <span class="tagline">Honestidade e mão de obra qualificada</span>
-                    <h2>Cuidamos do seu veículo com Excelência</h2>
-                    <p>
-                        Na Auto Mecânica São Gabriel, oferecemos diagnósticos precisos e manutenção transparente. 
-                        Seja <strong>carro de passeio ou caminhonete</strong>, utilizamos peças originais e tecnologia de ponta para garantir 
-                        sua segurança na estrada.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="https://wa.me/5519991339760?text=Ol%C3%A1%2C+vi+o+site+e+gostaria+de+agendar+um+servi%C3%A7o." target="_blank" class="cta-button">
-                            <i class="fab fa-whatsapp"></i> Agendar Agora
-                        </a>
-                        <a href="#localizacao" class="secondary-button">
-                            <i class="fas fa-map-marker-alt"></i> Ver Endereço
-                        </a>
+        <section id="inicio" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <span class="tagline">Honestidade e Mão de Obra Qualificada</span>
+                <h2>Cuidamos do seu veículo com Excelência</h2>
+                <p>
+                    Oferecemos diagnósticos precisos e manutenção transparente para carros de passeio e caminhonetes. 
+                    Tecnologia de ponta e peças originais para sua segurança.
+                </p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/5519991339760?text=Ol%C3%A1%2C+vi+o+site+e+gostaria+de+agendar+um+servi%C3%A7o." target="_blank" class="cta-button">
+                        <i class="fab fa-whatsapp"></i> Agendar Agora
+                    </a>
+                    <a href="#localizacao" class="secondary-button">
+                        <i class="fas fa-map-marker-alt"></i> Ver Endereço
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="about-section">
+            <div class="container about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=1974&auto=format&fit=crop" alt="Mecânico trabalhando">
+                    <div class="experience-badge">
+                        <span class="years">Desde</span>
+                        <span class="text">2021</span>
                     </div>
                 </div>
-                
-                <div id="canvas-container">
-                    <div class="sketchfab-embed-wrapper"> 
-                        <iframe 
-                            title="Volkswagen Voyage" 
-                            allowfullscreen 
-                            mozallowfullscreen="true" 
-                            webkitallowfullscreen="true" 
-                            allow="autoplay; fullscreen; xr-spatial-tracking" 
-                            xr-spatial-tracking 
-                            execution-while-out-of-viewport 
-                            execution-while-not-rendered 
-                            web-share 
-                            src="https://sketchfab.com/models/ea1eaa6d28334669aa3a4c5abfd39bf1/embed?autostart=1&ui_controls=1&ui_infos=0&ui_inspector=0&ui_stop=0&ui_watermark=1&ui_watermark_link=1"> 
-                        </iframe> 
+                <div class="about-text">
+                    <h4 class="section-subtitle">Quem Somos</h4>
+                    <h2>Qualidade e Confiança para o seu Automóvel</h2>
+                    <p>
+                        A Auto Mecânica São Gabriel nasceu com a missão de trazer transparência e honestidade para o mercado automotivo de Campinas. 
+                        Entendemos que seu veículo é parte essencial da sua vida e trabalho.
+                    </p>
+                    <p>
+                        Nossa equipe é altamente treinada para lidar com as tecnologias mais modernas, atendendo desde veículos populares até caminhonetes e importados.
+                    </p>
+                    
+                    <ul class="features-list">
+                        <li><i class="fas fa-check-circle"></i> Especialistas em Injeção Eletrônica</li>
+                        <li><i class="fas fa-check-circle"></i> Peças com Garantia de Procedência</li>
+                        <li><i class="fas fa-check-circle"></i> Orçamento Transparente sem surpresas</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="services-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Nossos Serviços</h2>
+                    <p>Soluções completas de ponta a ponta.</p>
+                </div>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <div class="icon-wrapper"><i class="fas fa-truck-pickup"></i></div>
+                        <h3>Carros e Caminhonetes</h3>
+                        <p>Mecânica especializada para linha leve e utilitários.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon-wrapper"><i class="fas fa-oil-can"></i></div>
+                        <h3>Troca de Óleo</h3>
+                        <p>Lubrificantes de alta performance e filtros originais.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon-wrapper"><i class="fas fa-car-crash"></i></div>
+                        <h3>Suspensão e Freios</h3>
+                        <p>Revisão completa para sua estabilidade e segurança.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon-wrapper"><i class="fas fa-microchip"></i></div>
+                        <h3>Injeção Eletrônica</h3>
+                        <p>Diagnóstico computadorizado com scanners modernos.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon-wrapper"><i class="fas fa-snowflake"></i></div>
+                        <h3>Ar Condicionado</h3>
+                        <p>Higienização, troca de filtro e recarga de gás.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon-wrapper"><i class="fas fa-clipboard-check"></i></div>
+                        <h3>Revisão Preventiva</h3>
+                        <p>Checklist completo para viagens tranquilas.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-      <section id="servicos" class="container services">
-            <div class="section-header">
-                <h2>Nossos Serviços</h2>
-                <p>Soluções completas para carros e caminhonetes.</p>
-            </div>
-            <div class="service-grid">
-                <div class="service-card">
-                    <i class="fas fa-truck-pickup icon-box"></i>
-                    <h3>Carros e Caminhonetes</h3>
-                    <p>Mecânica especializada para linha leve e utilitários.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-oil-can icon-box"></i>
-                    <h3>Troca de Óleo</h3>
-                    <p>Lubrificantes e filtros originais.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-car-crash icon-box"></i>
-                    <h3>Suspensão e Freios</h3>
-                    <p>Segurança e estabilidade garantida.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-microchip icon-box"></i>
-                    <h3>Injeção Eletrônica</h3>
-                    <p>Diagnóstico computadorizado avançado.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-snowflake icon-box"></i>
-                    <h3>Ar Condicionado</h3>
-                    <p>Higienização e recarga de gás.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-check-circle icon-box"></i>
-                    <h3>Revisão Preventiva</h3>
-                    <p>Checklist completo para viagens.</p>
-                </div>
-            </div>
-        </section>
-<section id="marcas" class="brands-section">
+        <section id="marcas" class="brands-section">
             <div class="container">
                 <div class="section-header">
                     <h2>Marcas que Atendemos</h2>
-                    <p>Especialistas nas principais montadoras do mercado.</p>
+                    <p>Expertise nas principais montadoras nacionais e importadas.</p>
                 </div>
-                
                 <div class="brands-grid">
-                    <div class="brand-item">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Volkswagen_Logo_till_1995.svg/1024px-Volkswagen_Logo_till_1995.svg.png" alt="Volkswagen">
-                    </div>
-                    <div class="brand-item">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mercedes-Logo.svg/1024px-Mercedes-Logo.svg.png" alt="Mercedes">
-                    </div>
-                    <div class="brand-item">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/2048px-BMW.svg.png" alt="BMW">
-                    </div>
-                    <div class="brand-item">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Fiat_Automobiles_logo.svg/2048px-Fiat_Automobiles_logo.svg.png" alt="Fiat">
-                    </div>
-                    <div class="brand-item">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Ford_logo_flat.svg/2560px-Ford_logo_flat.svg.png" alt="Ford">
-                    </div>
-                    <div class="brand-item">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Chevrolet_bowtie_logo.svg/2560px-Chevrolet_bowtie_logo.svg.png" alt="Chevrolet">
-                    </div>
-                    <div class="brand-item">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Toyota_Page_Semi-Flat_Logo.svg/2560px-Toyota_Page_Semi-Flat_Logo.svg.png" alt="Toyota">
-                    </div>
-                    <div class="brand-item">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Honda_Logo.svg/2560px-Honda_Logo.svg.png" alt="Honda">
-                    </div>
+                    <div class="brand-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Volkswagen_Logo_till_1995.svg/1024px-Volkswagen_Logo_till_1995.svg.png" alt="VW"></div>
+                    <div class="brand-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mercedes-Logo.svg/1024px-Mercedes-Logo.svg.png" alt="Mercedes"></div>
+                    <div class="brand-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/2048px-BMW.svg.png" alt="BMW"></div>
+                    <div class="brand-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Fiat_Automobiles_logo.svg/2048px-Fiat_Automobiles_logo.svg.png" alt="Fiat"></div>
+                    <div class="brand-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Ford_logo_flat.svg/2560px-Ford_logo_flat.svg.png" alt="Ford"></div>
+                    <div class="brand-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Chevrolet_bowtie_logo.svg/2560px-Chevrolet_bowtie_logo.svg.png" alt="GM"></div>
+                    <div class="brand-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Toyota_Page_Semi-Flat_Logo.svg/2560px-Toyota_Page_Semi-Flat_Logo.svg.png" alt="Toyota"></div>
+                    <div class="brand-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Honda_Logo.svg/2560px-Honda_Logo.svg.png" alt="Honda"></div>
                 </div>
             </div>
         </section>
-     <section id="localizacao" class="location-section">
+
+        <section id="localizacao" class="location-section">
             <div class="container">
                 <div class="section-header">
                     <h2>Onde nos Encontrar</h2>
                 </div>
                 
-                <div class="map-container-flex">
-                    <div class="location-info">
-                        <div class="info-item">
-                            <i class="fas fa-map-marked-alt"></i>
+                <div class="contact-card-wrapper">
+                    <div class="contact-info">
+                        <div class="info-block">
+                            <i class="fas fa-map-marker-alt"></i>
                             <div>
                                 <h3>Endereço</h3>
                                 <p>Rua Regina Nogueira, 531<br>Jardim São Gabriel - Campinas/SP</p>
                             </div>
                         </div>
-                        <div class="info-item">
+                        <div class="info-block">
                             <i class="far fa-clock"></i>
                             <div>
                                 <h3>Horário de Funcionamento</h3>
-                                <p>Segunda a Sexta: 07:00 - 17:30<br>Sábado: 08:00 - 13:00</p>
+                                <p>Segunda a Sexta: 07:00 - 17:30</p>
+                                <p>Sábado: 08:00 - 13:00</p>
                             </div>
                         </div>
-                        <div class="info-item">
+                        <div class="info-block">
                             <i class="fab fa-whatsapp"></i>
                             <div>
                                 <h3>Contato</h3>
-                                <p>
-                                    <a href="https://wa.me/5519991339760?text=Ol%C3%A1%2C+vi+o+site+e+gostaria+de+agendar+um+servi%C3%A7o." target="_blank" style="color: white; text-decoration: none;">
-                                        (19) 99133-9760
-                                    </a>
-                                </p>
+                                <a href="https://wa.me/5519991339760?text=Ol%C3%A1%2C+vi+o+site+e+gostaria+de+agendar+um+servi%C3%A7o." target="_blank" class="contact-link">
+                                    (19) 99133-9760
+                                </a>
                             </div>
                         </div>
+                        
+                        <a href="https://wa.me/5519991339760?text=Ol%C3%A1%2C+vi+o+site+e+gostaria+de+agendar+um+servi%C3%A7o." target="_blank" class="btn-whatsapp-large">
+                            Chamar no WhatsApp
+                        </a>
                     </div>
 
-                    <div class="map-frame">
+                    <div class="map-wrapper">
                         <iframe 
-                            src="https://maps.google.com/maps?q=Rua+Regina+Nogueira,+531,+Campinas+-+SP&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                            src="https://maps.google.com/maps?q=Rua%20Regina%20Nogueira%2C%20531%2C%20Campinas&t=&z=15&ie=UTF8&iwloc=&output=embed"
                             width="100%" 
                             height="100%" 
                             style="border:0;" 
                             allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
+                            loading="lazy">
                         </iframe>
                     </div>
                 </div>
@@ -220,11 +201,13 @@
         </section>
     </main>
 
-    <footer id="contato">
-        <div class="container">
-            <h3>Auto Mecânica São Gabriel</h3>
-            <p>Qualidade e confiança desde 2025.</p>
-            <p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.7;">© Todos os direitos reservados.</p>
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <h3>São Gabriel</h3>
+                <p>Auto Mecânica</p>
+            </div>
+            <p class="copyright">© 2025 Todos os direitos reservados.</p>
         </div>
     </footer>
 
@@ -243,7 +226,6 @@
         hamburger.addEventListener('click', toggleMenu);
         overlay.addEventListener('click', toggleMenu);
 
-        // Fecha o menu ao clicar em um link
         links.forEach(link => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
