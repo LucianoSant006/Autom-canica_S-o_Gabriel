@@ -5,14 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auto Mecânica São Gabriel | Campinas</title>
 
-    <meta name="description" content="Auto Mecânica em Campinas - Especialistas em mecânica leve, caminhonetes, injeção eletrônica, suspensão, freios e revisão preventiva. Honestidade e serviço de confiança.">
+    <meta name="description" content="Auto Mecânica São Gabriel em Campinas - Especialistas em mecânica leve, caminhonetes, manutenção preventiva, freios e troca rápida de óleo. Honestidade e serviço de confiança.">
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!-- Fonte POP: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Ajustes rápidos para garantir a nova fonte */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        h1, h2, h3, h4, .logo h1, .subtitle, .tagline, .cta-button, .secondary-button {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+        }
+        .brand-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 80px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 10px;
+        }
+        .brand-item img {
+            max-width: 120px;
+            max-height: 60px;
+            object-fit: contain;
+        }
+        /* Ajuste para as novas imagens */
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 1.5rem;
+            align-items: center;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
-
 <body>
 
     <!-- HEADER -->
@@ -20,8 +55,8 @@
         <div class="container header-content">
 
             <div class="logo" aria-label="Logo Auto Mecânica São Gabriel">
-                <h1>São Gabriel</h1>
-                <span class="subtitle">Auto Mecânica</span>
+                <h1>Auto Mecânica</h1>
+                <span class="subtitle">São Gabriel</span>
             </div>
 
             <button class="hamburger-btn" aria-label="Abrir menu de navegação">
@@ -53,11 +88,12 @@
             <div class="container hero-content">
                 <span class="tagline">Honestidade e Mão de Obra Qualificada</span>
 
-                <h2>Cuidamos do seu veículo com Excelência</h2>
+                <h2>Seu carro merece cuidados de verdade</h2>
 
                 <p>
-                    Oferecemos diagnósticos precisos e manutenção transparente para carros de passeio e caminhonetes. 
-                    Equipamentos avançados e peças de alto desempenho para sua segurança.
+                    Na <strong>Auto Mecânica São Gabriel</strong>, cuidamos do seu veículo com a mesma dedicação que você teria. 
+                    Especialistas em manutenção preventiva, mecânica leve e caminhonetes, entregamos serviços rápidos, 
+                    transparentes e com garantia. Porque sua segurança não tem preço.
                 </p>
 
                 <div class="hero-buttons">
@@ -93,21 +129,22 @@
 
                 <div class="about-text">
                     <h4 class="section-subtitle">Quem Somos</h4>
-                    <h2>Qualidade e Confiança para o Seu Automóvel</h2>
+                    <h2>Confiança que você sente em cada detalhe</h2>
 
                     <p>
-                        A Auto Mecânica São Gabriel nasceu com a missão de trazer transparência e honestidade para o mercado automotivo de Campinas.
-                        Sabemos que seu veículo é essencial para o seu dia a dia — por isso tratamos cada serviço com seriedade e excelência.
+                        Fundada com um propósito claro, a <strong>Auto Mecânica São Gabriel</strong> nasceu para mudar a forma como as pessoas enxergam serviços automotivos em Campinas. 
+                        Acreditamos que mecânica de qualidade anda de mãos dadas com transparência, respeito e atendimento humano.
                     </p>
 
                     <p>
-                        Nossa equipe é altamente treinada e utiliza equipamentos modernos para atender desde veículos populares até caminhonetes e importados.
+                        Nossa equipe é formada por profissionais que priorizam a manutenção preventiva, ajudando você a evitar dores de cabeça e gastos inesperados. 
+                        Aqui, você sempre sabe o que está sendo feito no seu veículo e por quê.
                     </p>
 
                     <ul class="features-list">
-                        <li><i class="fas fa-check-circle"></i> Especialistas em Injeção Eletrônica</li>
-                        <li><i class="fas fa-check-circle"></i> Peças com Garantia e Alto Desempenho</li>
-                        <li><i class="fas fa-check-circle"></i> Orçamento Transparente sem Surpresas</li>
+                        <li><i class="fas fa-check-circle"></i> Diagnóstico claro e honesto</li>
+                        <li><i class="fas fa-check-circle"></i> Peças de qualidade com garantia</li>
+                        <li><i class="fas fa-check-circle"></i> Orçamento detalhado sem letras miúdas</li>
                     </ul>
                 </div>
 
@@ -119,41 +156,91 @@
             <div class="container">
 
                 <div class="section-header">
-                    <h2>Nossos Serviços</h2>
-                    <p>Soluções completas para o cuidado do seu veículo.</p>
+                    <h2>Serviços que vão além da mecânica</h2>
+                    <p>Cuidamos de cada detalhe para você rodar tranquilo.</p>
                 </div>
 
                 <div class="service-grid">
 
-                    <div class="service-card">
-                        <div class="icon-wrapper"><i class="fas fa-truck-pickup"></i></div>
-                        <h3>Carros e Caminhonetes</h3>
-                        <p>Mecânica especializada para veículos leves e utilitários.</p>
-                    </div>
+                    <!-- Card 1 - Carros e Caminhonetes -->
+                    <a href="https://wa.me/5519991339760?text=Olá!%20Tenho%20interesse%20no%20serviço%20de%20mecânica%20para%20carros%20e%20caminhonetes%20da%20Auto%20Mecânica%20São%20Gabriel." 
+                       target="_blank" class="service-card-link">
+                        <div class="service-card">
+                            <div class="icon-wrapper"><i class="fas fa-truck-pickup"></i></div>
+                            <h3>Carros e Caminhonetes</h3>
+                            <p>Atendimento especializado para veículos leves e utilitários, com foco em durabilidade e performance.</p>
+                        </div>
+                    </a>
 
-                    <div class="service-card">
-                        <div class="icon-wrapper"><i class="fas fa-oil-can"></i></div>
-                        <h3>Troca de Óleo</h3>
-                        <p>Lubrificantes de alto desempenho e filtros confiáveis.</p>
-                    </div>
+                    <!-- Card 2 - Troca Rápida de Óleo -->
+                    <a href="https://wa.me/5519991339760?text=Olá!%20Gostaria%20de%20agendar%20uma%20troca%20rápida%20de%20óleo%20na%20Auto%20Mecânica%20São%20Gabriel." 
+                       target="_blank" class="service-card-link">
+                        <div class="service-card">
+                            <div class="icon-wrapper"><i class="fas fa-oil-can"></i></div>
+                            <h3>Troca Rápida de Óleo</h3>
+                            <p>Serviço ágil com lubrificantes de primeira linha e filtros originais, garantindo a saúde do motor.</p>
+                        </div>
+                    </a>
 
-                    <div class="service-card">
-                        <div class="icon-wrapper"><i class="fas fa-car-crash"></i></div>
-                        <h3>Suspensão e Freios</h3>
-                        <p>Revisão completa para estabilidade e segurança.</p>
-                    </div>
+                    <!-- Card 3 - Suspensão e Freios -->
+                    <a href="https://wa.me/5519991339760?text=Olá!%20Preciso%20de%20uma%20revisão%20de%20suspensão%20e%20freios%20na%20Auto%20Mecânica%20São%20Gabriel." 
+                       target="_blank" class="service-card-link">
+                        <div class="service-card">
+                            <div class="icon-wrapper"><i class="fas fa-car-crash"></i></div>
+                            <h3>Suspensão e Freios</h3>
+                            <p>Segurança em primeiro lugar: revisão completa para estabilidade, conforto e frenagem eficiente.</p>
+                        </div>
+                    </a>
 
-                    <div class="service-card">
-                        <div class="icon-wrapper"><i class="fas fa-microchip"></i></div>
-                        <h3>Injeção Eletrônica</h3>
-                        <p>Diagnóstico computadorizado com scanners modernos.</p>
-                    </div>
+                    <!-- Card 4 - Troca de Freios -->
+                    <a href="https://wa.me/5519991339760?text=Olá!%20Quero%20fazer%20a%20troca%20dos%20freios%20do%20meu%20veículo%20na%20Auto%20Mecânica%20São%20Gabriel." 
+                       target="_blank" class="service-card-link">
+                        <div class="service-card">
+                            <div class="icon-wrapper"><i class="fas fa-brake-warning"></i></div>
+                            <h3>Troca de Freios</h3>
+                            <p>Substituição de pastilhas, discos e fluido com componentes de alta qualidade e total segurança.</p>
+                        </div>
+                    </a>
 
-                    <div class="service-card">
-                        <div class="icon-wrapper"><i class="fas fa-clipboard-check"></i></div>
-                        <h3>Revisão Preventiva</h3>
-                        <p>Checklist completo para evitar problemas futuros.</p>
-                    </div>
+                    <!-- Card 5 - Troca de Correia -->
+                    <a href="https://wa.me/5519991339760?text=Olá!%20Preciso%20trocar%20a%20correia%20do%20motor%20na%20Auto%20Mecânica%20São%20Gabriel." 
+                       target="_blank" class="service-card-link">
+                        <div class="service-card">
+                            <div class="icon-wrapper"><i class="fas fa-belt"></i></div>
+                            <h3>Troca de Correia</h3>
+                            <p>Correia dentada, alternador e acessórios: troca preventiva para evitar quebras e danos ao motor.</p>
+                        </div>
+                    </a>
+
+                    <!-- Card 6 - Troca de Velas -->
+                    <a href="https://wa.me/5519991339760?text=Olá!%20Gostaria%20de%20trocar%20as%20velas%20do%20meu%20carro%20na%20Auto%20Mecânica%20São%20Gabriel." 
+                       target="_blank" class="service-card-link">
+                        <div class="service-card">
+                            <div class="icon-wrapper"><i class="fas fa-bolt"></i></div>
+                            <h3>Troca de Velas</h3>
+                            <p>Ignição eficiente: substituímos velas e verificamos todo o sistema para partidas mais suaves.</p>
+                        </div>
+                    </a>
+
+                    <!-- Card 7 - Sistema de Injeção -->
+                    <a href="https://wa.me/5519991339760?text=Olá!%20Meu%20carro%20está%20com%20problema%20na%20injeção.%20Podem%20ajudar%20na%20Auto%20Mecânica%20São%20Gabriel?" 
+                       target="_blank" class="service-card-link">
+                        <div class="service-card">
+                            <div class="icon-wrapper"><i class="fas fa-microchip"></i></div>
+                            <h3>Sistema de Injeção</h3>
+                            <p>Diagnóstico preciso e manutenção especializada para o correto funcionamento do motor e economia de combustível.</p>
+                        </div>
+                    </a>
+
+                    <!-- Card 8 - Revisão Preventiva -->
+                    <a href="https://wa.me/5519991339760?text=Olá!%20Quero%20agendar%20uma%20revisão%20preventiva%20na%20Auto%20Mecânica%20São%20Gabriel." 
+                       target="_blank" class="service-card-link">
+                        <div class="service-card">
+                            <div class="icon-wrapper"><i class="fas fa-clipboard-check"></i></div>
+                            <h3>Revisão Preventiva</h3>
+                            <p>Checklist completo para identificar desgastes e evitar surpresas desagradáveis no futuro.</p>
+                        </div>
+                    </a>
 
                 </div>
             </div>
@@ -164,8 +251,8 @@
             <div class="container">
 
                 <div class="section-header">
-                    <h2>Marcas que Atendemos</h2>
-                    <p>Especialistas nas principais montadoras nacionais e importadas.</p>
+                    <h2>Marcas que atendemos com expertise</h2>
+                    <p>Nacionais e importadas, nosso time conhece cada uma delas.</p>
                 </div>
 
                 <div class="brands-grid">
@@ -174,9 +261,11 @@
                     <div class="brand-item"><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg" alt="BMW"></div>
                     <div class="brand-item"><img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Fiat_Automobiles_logo.svg" alt="Fiat"></div>
                     <div class="brand-item"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Ford_logo_flat.svg" alt="Ford"></div>
-                    <div class="brand-item"><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Chevrolet_bowtie_logo.svg" alt="Chevrolet"></div>
-                    <div class="brand-item"><img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Toyota_Page_Semi-Flat_Logo.svg" alt="Toyota"></div>
-                    <div class="brand-item"><img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Honda_Logo.svg" alt="Honda"></div>
+                    <div class="brand-item"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Toyota_carlogo.svg" alt="Toyota"></div>
+                    <!-- Chevrolet com SVG -->
+                    <div class="brand-item"><img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Chevrolet_logo_2013.svg" alt="Chevrolet"></div>
+                    <!-- Honda com SVG -->
+                    <div class="brand-item"><img src="https://upload.wikimedia.org/wikipedia/commons/1/14/Honda_symbol.svg" alt="Honda"></div>
                 </div>
 
             </div>
@@ -187,7 +276,7 @@
             <div class="container">
 
                 <div class="section-header">
-                    <h2>Onde nos Encontrar</h2>
+                    <h2>Estamos prontos para receber você</h2>
                 </div>
 
                 <div class="contact-card-wrapper">
@@ -206,8 +295,7 @@
                             <i class="far fa-clock"></i>
                             <div>
                                 <h3>Horário de Funcionamento</h3>
-                                <p>Segunda a Sexta: 08:00 – 16:30</p>
-                                <!-- Sábado removido conforme solicitação -->
+                                <p>Segunda a Sexta: 08:00 – 17:00</p>
                             </div>
                         </div>
 
@@ -249,8 +337,8 @@
     <footer>
         <div class="container footer-content">
             <div class="footer-logo">
-                <h3>São Gabriel</h3>
-                <p>Auto Mecânica</p>
+                <h3>Auto Mecânica São Gabriel</h3>
+                <p>Confiança que move</p>
             </div>
             <p class="copyright">© 2025 Todos os direitos reservados.</p>
         </div>
@@ -286,6 +374,28 @@
             track.style.transform = `translateX(${-index * 100}%)`;
         }, 3000);
     </script>
+
+    <!-- Estilo adicional para os links de serviço -->
+    <style>
+        .service-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        .service-card-link:hover {
+            transform: translateY(-5px);
+        }
+        .service-card-link .service-card {
+            height: 100%;
+        }
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+    </style>
 
 </body>
 </html>
