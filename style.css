@@ -109,6 +109,7 @@ p { margin: 0; }
 .rating-stamp b { font-family: "Barlow Condensed"; font-size: 3.5rem; line-height: .9; }
 .rating-stamp span { font-size: .8rem; font-weight: 700; }
 .about-copy h2 { margin-bottom: 25px; }
+.orange-lowercase { color: var(--red); text-transform: lowercase; }
 .about-copy p { margin-bottom: 16px; color: #626269; }
 .check-list { display: grid; gap: 12px; padding: 0; margin: 28px 0 0; list-style: none; font-weight: 700; }
 .check-list i { display: inline-grid; width: 23px; height: 23px; place-items: center; margin-right: 9px; border-radius: 50%; background: var(--red); color: white; font-size: .7rem; }
