@@ -1,401 +1,172 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto Mecânica São Gabriel | Campinas</title>
-
-    <meta name="description" content="Auto Mecânica São Gabriel em Campinas - Especialistas em mecânica leve, caminhonetes, manutenção preventiva, freios e troca rápida de óleo. Honestidade e serviço de confiança.">
-
-    <!-- Fonte POP: Poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Ajustes rápidos para garantir a nova fonte */
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
-        h1, h2, h3, h4, .logo h1, .subtitle, .tagline, .cta-button, .secondary-button {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-        }
-        .brand-item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 80px;
-            background: #f9f9f9;
-            border-radius: 8px;
-            padding: 10px;
-        }
-        .brand-item img {
-            max-width: 120px;
-            max-height: 60px;
-            object-fit: contain;
-        }
-        /* Ajuste para as novas imagens */
-        .brands-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-            gap: 1.5rem;
-            align-items: center;
-            margin-top: 2rem;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Auto Mecânica em Campinas | Auto Mecânica São Gabriel</title>
+  <meta name="description" content="Auto Mecânica São Gabriel em Campinas: revisão, troca de óleo, freios, suspensão, balanceamento, motor, câmbio e diagnóstico automotivo no Jardim São Gabriel.">
+  <meta name="keywords" content="auto mecânica em Campinas, mecânico no Jardim São Gabriel, balanceamento em Campinas, revisão automotiva, troca de óleo">
+  <meta name="theme-color" content="#0b0b0c">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Auto Mecânica São Gabriel | Campinas">
+  <meta property="og:description" content="Seu carro em boas mãos. Atendimento honesto e manutenção automotiva em Campinas e região.">
+  <meta property="og:image" content="assets/images/logo-auto-mecanica-sao-gabriel.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"AutoRepair",
+    "name":"Auto Mecânica São Gabriel",
+    "description":"Auto mecânica com ótimas prestações de serviços, honestidade e excelente atendimento ao cliente.",
+    "image":"assets/images/logo-auto-mecanica-sao-gabriel.png",
+    "telephone":"+55 19 99133-9760",
+    "priceRange":"$$",
+    "areaServed":"Campinas e região",
+    "address":{"@type":"PostalAddress","streetAddress":"Rua Regina Nogueira, 531","addressLocality":"Campinas","addressRegion":"SP","postalCode":"13045-290","addressCountry":"BR"},
+    "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"}],
+    "aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"30","bestRating":"5"}
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 
-    <!-- HEADER -->
-    <header>
-        <div class="container header-content">
+  <header class="site-header" id="inicio">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="Auto Mecânica São Gabriel - página inicial">
+        <img src="assets/images/logo-auto-mecanica-sao-gabriel.png" alt="Auto Mecânica São Gabriel">
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="menu-principal" class="main-nav" aria-label="Navegação principal">
+        <a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a>
+        <a href="#avaliacoes">Avaliações</a><a href="#localizacao">Localização</a><a href="#contato">Contato</a>
+      </nav>
+      <a class="button button-small header-cta" href="https://wa.me/5519991339760?text=Ol%C3%A1%21%20Encontrei%20a%20Auto%20Mec%C3%A2nica%20S%C3%A3o%20Gabriel%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Falar no WhatsApp
+      </a>
+    </div>
+  </header>
 
-            <div class="logo" aria-label="Logo Auto Mecânica São Gabriel">
-                <h1>Auto Mecânica</h1>
-                <span class="subtitle">São Gabriel</span>
-            </div>
-
-            <button class="hamburger-btn" aria-label="Abrir menu de navegação">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-
-            <nav class="nav-menu" aria-label="Menu principal">
-                <ul>
-                    <li><a href="#inicio" class="active">Início</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#marcas">Marcas</a></li>
-                    <li><a href="#localizacao">Contato</a></li>
-                </ul>
-            </nav>
-
-            <div class="overlay"></div>
+  <main id="conteudo">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" role="img" aria-label="Mecânico realizando manutenção em um automóvel"></div>
+      <div class="hero-shade"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Jardim São Gabriel • Campinas</span>
+          <h1 id="hero-title">Seu carro em<br><em>boas mãos</em></h1>
+          <p>Manutenção automotiva com diagnóstico claro, serviço bem executado e respeito pelo seu veículo. Transparência do orçamento à entrega.</p>
+          <div class="hero-actions">
+            <a class="button" href="https://wa.me/5519991339760?text=Ol%C3%A1%21%20Encontrei%20a%20Auto%20Mec%C3%A2nica%20S%C3%A3o%20Gabriel%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Solicitar orçamento</a>
+            <a class="button button-outline" href="https://www.google.com/maps/search/?api=1&query=Rua+Regina+Nogueira+531+Campinas+SP" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-route" aria-hidden="true"></i> Como chegar</a>
+          </div>
+          <div class="trust-row" aria-label="Indicadores de confiança">
+            <div><strong>5,0</strong><span>★★★★★ no Google</span></div>
+            <div><strong>30</strong><span>avaliações</span></div>
+            <div><strong>Campinas</strong><span>e região</span></div>
+          </div>
         </div>
-    </header>
+      </div>
+    </section>
 
-    <main>
-
-        <!-- HERO -->
-        <section id="inicio" class="hero">
-            <div class="hero-overlay"></div>
-
-            <div class="container hero-content">
-                <span class="tagline">Honestidade e Mão de Obra Qualificada</span>
-
-                <h2>Seu carro merece cuidados de verdade</h2>
-
-                <p>
-                    Na <strong>Auto Mecânica São Gabriel</strong>, cuidamos do seu veículo com a mesma dedicação que você teria. 
-                    Especialistas em manutenção preventiva, mecânica leve e caminhonetes, entregamos serviços rápidos, 
-                    transparentes e com garantia. Porque sua segurança não tem preço.
-                </p>
-
-                <div class="hero-buttons">
-                    <a href="https://wa.me/5519991339760?text=Olá!%20Vi%20o%20site%20da%20Auto%20Mecânica%20São%20Gabriel%20e%20gostaria%20de%20agendar%20um%20serviço." 
-                       target="_blank" class="cta-button" aria-label="Agendar no WhatsApp">
-                        <i class="fab fa-whatsapp"></i> Agendar Agora
-                    </a>
-
-                    <a href="#localizacao" class="secondary-button">
-                        <i class="fas fa-map-marker-alt"></i> Ver Endereço
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- SOBRE -->
-        <section id="sobre" class="about-section">
-            <div class="container about-grid">
-
-                <div class="about-image carousel-container">
-                    <div class="carousel-track">
-                        <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=1974&auto=format&fit=crop" alt="Visão geral da oficina">
-                        <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?q=80&w=2070&auto=format&fit=crop" alt="Trabalhos mecânicos no motor">
-                        <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?q=80&w=2000&auto=format&fit=crop" alt="Ferramentas automotivas">
-                        <img src="https://images.unsplash.com/photo-1632823471565-1ec2a1ad4015?q=80&w=2000&auto=format&fit=crop" alt="Elevador automotivo em uso">
-                    </div>
-
-                    <div class="experience-badge">
-                        <span class="years">Desde</span>
-                        <span class="text">2021</span>
-                    </div>
-                </div>
-
-                <div class="about-text">
-                    <h4 class="section-subtitle">Quem Somos</h4>
-                    <h2>Confiança que você sente em cada detalhe</h2>
-
-                    <p>
-                        Fundada com um propósito claro, a <strong>Auto Mecânica São Gabriel</strong> nasceu para mudar a forma como as pessoas enxergam serviços automotivos em Campinas. 
-                        Acreditamos que mecânica de qualidade anda de mãos dadas com transparência, respeito e atendimento humano.
-                    </p>
-
-                    <p>
-                        Nossa equipe é formada por profissionais que priorizam a manutenção preventiva, ajudando você a evitar dores de cabeça e gastos inesperados. 
-                        Aqui, você sempre sabe o que está sendo feito no seu veículo e por quê.
-                    </p>
-
-                    <ul class="features-list">
-                        <li><i class="fas fa-check-circle"></i> Diagnóstico claro e honesto</li>
-                        <li><i class="fas fa-check-circle"></i> Peças de qualidade com garantia</li>
-                        <li><i class="fas fa-check-circle"></i> Orçamento detalhado sem letras miúdas</li>
-                    </ul>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- SERVIÇOS -->
-        <section id="servicos" class="services-section">
-            <div class="container">
-
-                <div class="section-header">
-                    <h2>Serviços que vão além da mecânica</h2>
-                    <p>Cuidamos de cada detalhe para você rodar tranquilo.</p>
-                </div>
-
-                <div class="service-grid">
-
-                    <!-- Card 1 - Carros e Caminhonetes -->
-                    <a href="https://wa.me/5519991339760?text=Olá!%20Tenho%20interesse%20no%20serviço%20de%20mecânica%20para%20carros%20e%20caminhonetes%20da%20Auto%20Mecânica%20São%20Gabriel." 
-                       target="_blank" class="service-card-link">
-                        <div class="service-card">
-                            <div class="icon-wrapper"><i class="fas fa-truck-pickup"></i></div>
-                            <h3>Carros e Caminhonetes</h3>
-                            <p>Atendimento especializado para veículos leves e utilitários, com foco em durabilidade e performance.</p>
-                        </div>
-                    </a>
-
-                    <!-- Card 2 - Troca Rápida de Óleo -->
-                    <a href="https://wa.me/5519991339760?text=Olá!%20Gostaria%20de%20agendar%20uma%20troca%20rápida%20de%20óleo%20na%20Auto%20Mecânica%20São%20Gabriel." 
-                       target="_blank" class="service-card-link">
-                        <div class="service-card">
-                            <div class="icon-wrapper"><i class="fas fa-oil-can"></i></div>
-                            <h3>Troca Rápida de Óleo</h3>
-                            <p>Serviço ágil com lubrificantes de primeira linha e filtros originais, garantindo a saúde do motor.</p>
-                        </div>
-                    </a>
-
-                    <!-- Card 3 - Suspensão e Freios -->
-                    <a href="https://wa.me/5519991339760?text=Olá!%20Preciso%20de%20uma%20revisão%20de%20suspensão%20e%20freios%20na%20Auto%20Mecânica%20São%20Gabriel." 
-                       target="_blank" class="service-card-link">
-                        <div class="service-card">
-                            <div class="icon-wrapper"><i class="fas fa-car-crash"></i></div>
-                            <h3>Suspensão e Freios</h3>
-                            <p>Segurança em primeiro lugar: revisão completa para estabilidade, conforto e frenagem eficiente.</p>
-                        </div>
-                    </a>
-
-                    <!-- Card 4 - Troca de Freios -->
-                    <a href="https://wa.me/5519991339760?text=Olá!%20Quero%20fazer%20a%20troca%20dos%20freios%20do%20meu%20veículo%20na%20Auto%20Mecânica%20São%20Gabriel." 
-                       target="_blank" class="service-card-link">
-                        <div class="service-card">
-                            <div class="icon-wrapper"><i class="fas fa-brake-warning"></i></div>
-                            <h3>Troca de Freios</h3>
-                            <p>Substituição de pastilhas, discos e fluido com componentes de alta qualidade e total segurança.</p>
-                        </div>
-                    </a>
-
-                    <!-- Card 5 - Troca de Correia -->
-                    <a href="https://wa.me/5519991339760?text=Olá!%20Preciso%20trocar%20a%20correia%20do%20motor%20na%20Auto%20Mecânica%20São%20Gabriel." 
-                       target="_blank" class="service-card-link">
-                        <div class="service-card">
-                            <div class="icon-wrapper"><i class="fas fa-belt"></i></div>
-                            <h3>Troca de Correia</h3>
-                            <p>Correia dentada, alternador e acessórios: troca preventiva para evitar quebras e danos ao motor.</p>
-                        </div>
-                    </a>
-
-                    <!-- Card 6 - Troca de Velas -->
-                    <a href="https://wa.me/5519991339760?text=Olá!%20Gostaria%20de%20trocar%20as%20velas%20do%20meu%20carro%20na%20Auto%20Mecânica%20São%20Gabriel." 
-                       target="_blank" class="service-card-link">
-                        <div class="service-card">
-                            <div class="icon-wrapper"><i class="fas fa-bolt"></i></div>
-                            <h3>Troca de Velas</h3>
-                            <p>Ignição eficiente: substituímos velas e verificamos todo o sistema para partidas mais suaves.</p>
-                        </div>
-                    </a>
-
-                    <!-- Card 7 - Sistema de Injeção -->
-                    <a href="https://wa.me/5519991339760?text=Olá!%20Meu%20carro%20está%20com%20problema%20na%20injeção.%20Podem%20ajudar%20na%20Auto%20Mecânica%20São%20Gabriel?" 
-                       target="_blank" class="service-card-link">
-                        <div class="service-card">
-                            <div class="icon-wrapper"><i class="fas fa-microchip"></i></div>
-                            <h3>Sistema de Injeção</h3>
-                            <p>Diagnóstico preciso e manutenção especializada para o correto funcionamento do motor e economia de combustível.</p>
-                        </div>
-                    </a>
-
-                    <!-- Card 8 - Revisão Preventiva -->
-                    <a href="https://wa.me/5519991339760?text=Olá!%20Quero%20agendar%20uma%20revisão%20preventiva%20na%20Auto%20Mecânica%20São%20Gabriel." 
-                       target="_blank" class="service-card-link">
-                        <div class="service-card">
-                            <div class="icon-wrapper"><i class="fas fa-clipboard-check"></i></div>
-                            <h3>Revisão Preventiva</h3>
-                            <p>Checklist completo para identificar desgastes e evitar surpresas desagradáveis no futuro.</p>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- MARCAS -->
-        <section id="marcas" class="brands-section">
-            <div class="container">
-
-                <div class="section-header">
-                    <h2>Marcas que atendemos com expertise</h2>
-                    <p>Nacionais e importadas, nosso time conhece cada uma delas.</p>
-                </div>
-
-                <div class="brands-grid">
-                    <div class="brand-item"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Volkswagen_Logo_till_1995.svg" alt="Volkswagen"></div>
-                    <div class="brand-item"><img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Mercedes-Logo.svg" alt="Mercedes-Benz"></div>
-                    <div class="brand-item"><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg" alt="BMW"></div>
-                    <div class="brand-item"><img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Fiat_Automobiles_logo.svg" alt="Fiat"></div>
-                    <div class="brand-item"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Ford_logo_flat.svg" alt="Ford"></div>
-                    <div class="brand-item"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Toyota_carlogo.svg" alt="Toyota"></div>
-                    <!-- Chevrolet com SVG -->
-                    <div class="brand-item"><img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Chevrolet_logo_2013.svg" alt="Chevrolet"></div>
-                    <!-- Honda com SVG -->
-                    <div class="brand-item"><img src="https://upload.wikimedia.org/wikipedia/commons/1/14/Honda_symbol.svg" alt="Honda"></div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- LOCALIZAÇÃO -->
-        <section id="localizacao" class="location-section">
-            <div class="container">
-
-                <div class="section-header">
-                    <h2>Estamos prontos para receber você</h2>
-                </div>
-
-                <div class="contact-card-wrapper">
-
-                    <div class="contact-info">
-
-                        <div class="info-block">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h3>Endereço</h3>
-                                <p>Rua Regina Nogueira, 531<br>Jardim São Gabriel - Campinas/SP</p>
-                            </div>
-                        </div>
-
-                        <div class="info-block">
-                            <i class="far fa-clock"></i>
-                            <div>
-                                <h3>Horário de Funcionamento</h3>
-                                <p>Segunda a Sexta: 08:00 – 17:00</p>
-                            </div>
-                        </div>
-
-                        <div class="info-block">
-                            <i class="fab fa-whatsapp"></i>
-                            <div>
-                                <h3>Contato</h3>
-                                <a href="https://wa.me/5519991339760?text=Olá!%20Vi%20o%20site%20da%20Auto%20Mecânica%20São%20Gabriel%20e%20gostaria%20de%20agendar%20um%20serviço." 
-                                   target="_blank" 
-                                   class="contact-link">
-                                    (19) 99133-9760
-                                </a>
-                            </div>
-                        </div>
-
-                        <a href="https://wa.me/5519991339760?text=Olá!%20Vi%20o%20site%20da%20Auto%20Mecânica%20São%20Gabriel%20e%20gostaria%20de%20agendar%20um%20serviço." 
-                           target="_blank" 
-                           class="btn-whatsapp-large">
-                            Chamar no WhatsApp
-                        </a>
-
-                    </div>
-
-                    <div class="map-wrapper">
-                        <iframe 
-                            src="https://maps.google.com/maps?q=Rua%20Regina%20Nogueira%2C%20531%2C%20Campinas&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                            width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"
-                            title="Mapa da Auto Mecânica São Gabriel">
-                        </iframe>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-logo">
-                <h3>Auto Mecânica São Gabriel</h3>
-                <p>Confiança que move</p>
-            </div>
-            <p class="copyright">© 2025 Todos os direitos reservados.</p>
+    <section class="carousel-section" aria-labelledby="galeria-title">
+      <div class="container">
+        <div class="section-heading split-heading">
+          <div><span class="eyebrow dark">Cuidado em cada detalhe</span><h2 id="galeria-title">Nossa rotina é fazer você rodar tranquilo</h2></div>
+          <p>Da inspeção à manutenção completa, cada etapa é realizada com atenção, equipamentos adequados e comunicação transparente.</p>
         </div>
-    </footer>
+        <div class="carousel" aria-roledescription="carrossel" aria-label="Galeria de serviços automotivos" tabindex="0">
+          <div class="carousel-track">
+            <figure class="slide active"><img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1600&q=82" alt="Profissional realizando manutenção no motor de um carro"><figcaption>Diagnóstico e manutenção com atenção técnica</figcaption></figure>
+            <figure class="slide"><img loading="lazy" src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=1600&q=82" alt="Veículo elevado durante manutenção em oficina"><figcaption>Estrutura preparada para cuidar do seu veículo</figcaption></figure>
+            <figure class="slide"><img loading="lazy" src="https://images.unsplash.com/photo-1632823471565-1ec2a1ad4015?auto=format&fit=crop&w=1600&q=82" alt="Mecânico trabalhando cuidadosamente em um automóvel"><figcaption>Serviço responsável do começo ao fim</figcaption></figure>
+          </div>
+          <button class="carousel-control prev" type="button" aria-label="Imagem anterior"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="carousel-control next" type="button" aria-label="Próxima imagem"><i class="fa-solid fa-chevron-right"></i></button>
+          <div class="carousel-dots" aria-label="Selecionar imagem"></div>
+        </div>
+      </div>
+    </section>
 
-    <!-- WHATSAPP FLOAT -->
-    <a href="https://wa.me/5519991339760?text=Olá!%20Vi%20o%20site%20da%20Auto%20Mecânica%20São%20Gabriel%20e%20gostaria%20de%20agendar%20um%20serviço." 
-       class="whatsapp-float" target="_blank" aria-label="Contato WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <section class="services" id="servicos" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-heading centered"><span class="eyebrow">Serviços automotivos</span><h2 id="services-title">Tudo o que seu carro precisa</h2><p>Atendimento para manutenção preventiva e corretiva em Campinas e região.</p></div>
+        <div class="services-grid">
+          <article class="service-card"><span class="new-badge">NOVO</span><i class="fa-solid fa-gauge-high"></i><h3>Balanceamento</h3><p>Mais estabilidade, conforto e vida útil para os pneus, reduzindo vibrações durante a condução.</p><a href="#contato" data-service="Balanceamento">Pedir orçamento <i class="fa-solid fa-arrow-right"></i></a></article>
+          <article class="service-card"><i class="fa-solid fa-clipboard-check"></i><h3>Revisão preventiva</h3><p>Verificação dos principais sistemas para identificar desgastes antes que virem problemas.</p><a href="#contato" data-service="Revisão preventiva">Pedir orçamento <i class="fa-solid fa-arrow-right"></i></a></article>
+          <article class="service-card"><i class="fa-solid fa-oil-can"></i><h3>Óleo e filtros</h3><p>Troca no período correto, com produtos adequados às especificações do seu veículo.</p><a href="#contato" data-service="Troca de óleo e filtros">Pedir orçamento <i class="fa-solid fa-arrow-right"></i></a></article>
+          <article class="service-card"><i class="fa-solid fa-car-burst"></i><h3>Freios e suspensão</h3><p>Inspeção e manutenção para preservar segurança, estabilidade e conforto ao dirigir.</p><a href="#contato" data-service="Freios e suspensão">Pedir orçamento <i class="fa-solid fa-arrow-right"></i></a></article>
+          <article class="service-card"><i class="fa-solid fa-laptop-code"></i><h3>Diagnóstico automotivo</h3><p>Análise técnica para encontrar falhas e indicar somente o serviço realmente necessário.</p><a href="#contato" data-service="Diagnóstico automotivo">Pedir orçamento <i class="fa-solid fa-arrow-right"></i></a></article>
+          <article class="service-card"><i class="fa-solid fa-gears"></i><h3>Motor e câmbio</h3><p>Avaliação e manutenção dos conjuntos responsáveis pelo desempenho do seu veículo.</p><a href="#contato" data-service="Motor e câmbio">Pedir orçamento <i class="fa-solid fa-arrow-right"></i></a></article>
+          <article class="service-card"><i class="fa-solid fa-screwdriver-wrench"></i><h3>Manutenção geral</h3><p>Soluções para correias, velas, injeção, escapamento e outros componentes essenciais.</p><a href="#contato" data-service="Manutenção geral">Pedir orçamento <i class="fa-solid fa-arrow-right"></i></a></article>
+        </div>
+      </div>
+    </section>
 
-    <!-- SCRIPTS -->
-    <script>
-        const hamburger = document.querySelector('.hamburger-btn');
-        const navMenu = document.querySelector('.nav-menu');
-        const overlay = document.querySelector('.overlay');
+    <section class="about" id="sobre" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-visual"><img loading="lazy" src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1200&q=82" alt="Interior de oficina mecânica organizada"><div class="rating-stamp"><b>5,0</b><span>no Google</span></div></div>
+        <div class="about-copy"><span class="eyebrow dark">Sobre a oficina</span><h2 id="about-title">Confiança que se conquista em cada serviço</h2><p>Na Auto Mecânica São Gabriel, honestidade não é promessa: é a forma como trabalhamos. Explicamos o diagnóstico, apresentamos o orçamento com clareza e cuidamos do seu carro com responsabilidade.</p><p>Atendemos motoristas de Campinas e região com foco em qualidade, transparência e excelente atendimento.</p><ul class="check-list"><li><i class="fa-solid fa-check"></i> Diagnóstico explicado com clareza</li><li><i class="fa-solid fa-check"></i> Serviço cuidadoso e responsável</li><li><i class="fa-solid fa-check"></i> Atendimento próximo e transparente</li></ul></div>
+      </div>
+    </section>
 
-        function toggleMenu() {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-            overlay.classList.toggle('active');
-        }
+    <section class="reviews" id="avaliacoes" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="reviews-top"><div><span class="eyebrow">Reputação comprovada</span><h2 id="reviews-title">Quem conhece, recomenda</h2></div><div class="google-score"><strong>5,0</strong><div><span class="stars" aria-label="5 de 5 estrelas">★★★★★</span><small>30 avaliações no Google</small></div></div></div>
+        <div class="reviews-grid">
+          <article class="review-card"><span class="quote">“</span><p>Auto mecânica com ótimas prestações de serviços, honestidade e excelente atendimento ao cliente.</p><footer>Descrição no Google</footer></article>
+          <article class="review-card"><span class="quote">“</span><p>Atendimento próximo, explicação clara e cuidado com o veículo em todas as etapas do serviço.</p><footer>Destaques das avaliações</footer></article>
+          <article class="review-card"><span class="quote">“</span><p>Qualidade e transparência para o motorista saber exatamente o que está sendo feito no carro.</p><footer>Destaques das avaliações</footer></article>
+        </div>
+        <a class="text-link" href="https://www.google.com/search?q=Auto+Mec%C3%A2nica+S%C3%A3o+Gabriel+Campinas" target="_blank" rel="noopener noreferrer">Ver avaliações no Google <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      </div>
+    </section>
 
-        hamburger.addEventListener('click', toggleMenu);
-        overlay.addEventListener('click', toggleMenu);
+    <section class="location" id="localizacao" aria-labelledby="location-title">
+      <div class="container">
+        <div class="section-heading centered"><span class="eyebrow dark">Jardim São Gabriel</span><h2 id="location-title">Fácil de chegar. Pronto para atender.</h2></div>
+        <div class="location-card">
+          <div class="map"><iframe src="https://maps.google.com/maps?q=Rua%20Regina%20Nogueira%2C%20531%2C%20Campinas%20SP&t=&z=16&ie=UTF8&iwloc=&output=embed" loading="lazy" title="Mapa da Auto Mecânica São Gabriel na Rua Regina Nogueira, 531" allowfullscreen></iframe></div>
+          <address class="location-info">
+            <div><i class="fa-solid fa-location-dot"></i><span><b>Endereço</b>Rua Regina Nogueira, 531<br>Jardim São Gabriel, Campinas – SP<br>CEP 13045-290</span></div>
+            <div><i class="fa-solid fa-phone"></i><span><b>Telefone e WhatsApp</b><a href="tel:+5519991339760">(19) 99133-9760</a></span></div>
+            <div><i class="fa-regular fa-clock"></i><span><b>Horário de atendimento</b>Segunda a sexta: 8h às 18h<br>Sábado e domingo: fechado</span></div>
+            <a class="button" href="https://www.google.com/maps/search/?api=1&query=Rua+Regina+Nogueira+531+Campinas+SP" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-route"></i> Abrir rota no Google Maps</a>
+          </address>
+        </div>
+      </div>
+    </section>
 
-        const track = document.querySelector('.carousel-track');
-        const images = document.querySelectorAll('.carousel-track img');
-        let index = 0;
+    <section class="contact" id="contato" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div class="contact-copy"><span class="eyebrow">Orçamento pelo WhatsApp</span><h2 id="contact-title">Conte o que seu carro precisa</h2><p>Preencha os dados e envie sua solicitação diretamente para nossa equipe. Responderemos pelo WhatsApp.</p><a href="tel:+5519991339760"><i class="fa-solid fa-phone"></i> (19) 99133-9760</a></div>
+        <form id="quote-form" class="quote-form" novalidate>
+          <div class="field-row"><label>Nome<input type="text" name="nome" autocomplete="name" required><small></small></label><label>Telefone<input type="tel" name="telefone" autocomplete="tel" required><small></small></label></div>
+          <div class="field-row"><label>Veículo<input type="text" name="veiculo" placeholder="Ex.: Gol 2018" required><small></small></label><label>Serviço desejado<select name="servico" required><option value="">Selecione</option><option>Balanceamento</option><option>Revisão preventiva</option><option>Troca de óleo e filtros</option><option>Freios e suspensão</option><option>Diagnóstico automotivo</option><option>Motor e câmbio</option><option>Manutenção geral</option></select><small></small></label></div>
+          <label>Mensagem<textarea name="mensagem" rows="4" placeholder="Descreva o problema ou serviço necessário" required></textarea><small></small></label>
+          <button class="button" type="submit"><i class="fa-brands fa-whatsapp"></i> Enviar solicitação</button>
+          <p class="form-note">Ao enviar, o WhatsApp será aberto com sua mensagem pronta.</p>
+        </form>
+      </div>
+    </section>
+  </main>
 
-        setInterval(() => {
-            index = (index + 1) % images.length;
-            track.style.transform = `translateX(${-index * 100}%)`;
-        }, 3000);
-    </script>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><img src="assets/images/logo-auto-mecanica-sao-gabriel.png" alt="Auto Mecânica São Gabriel"><p>Manutenção automotiva com honestidade, qualidade e excelente atendimento.</p></div>
+      <div><h3>Atalhos</h3><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#avaliacoes">Avaliações</a><a href="#contato">Contato</a></div>
+      <address><h3>Contato</h3><span>Rua Regina Nogueira, 531<br>Campinas – SP</span><a href="tel:+5519991339760">(19) 99133-9760</a><span>Seg. a sex.: 8h às 18h</span></address>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 Auto Mecânica São Gabriel. Todos os direitos reservados.</span><span>Campinas e região</span></div>
+  </footer>
 
-    <!-- Estilo adicional para os links de serviço -->
-    <style>
-        .service-card-link {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-            transition: transform 0.3s ease;
-        }
-        .service-card-link:hover {
-            transform: translateY(-5px);
-        }
-        .service-card-link .service-card {
-            height: 100%;
-        }
-        .service-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-    </style>
-
+  <a class="whatsapp-float" href="https://wa.me/5519991339760?text=Ol%C3%A1%21%20Encontrei%20a%20Auto%20Mec%C3%A2nica%20S%C3%A3o%20Gabriel%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" aria-label="Solicitar orçamento pelo WhatsApp"><i class="fa-brands fa-whatsapp"></i><span>Falar no WhatsApp</span></a>
+  <script src="script.js"></script>
 </body>
 </html>
