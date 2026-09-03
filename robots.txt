@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://auto-mecanica-sao-gabriel-campinas.santiagoluciano383.chatgpt.site/sitemap.xml
